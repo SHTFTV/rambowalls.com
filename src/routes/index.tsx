@@ -83,7 +83,7 @@ function Hero() {
     <section className="relative overflow-hidden">
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center opacity-40"
-        style={{ backgroundImage: "url(/images/hero-construction.png)" }}
+        style={{ backgroundImage: `url(${IMG.hero})` }}
         aria-hidden
       />
       <div
