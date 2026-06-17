@@ -151,7 +151,7 @@ function Services() {
             <div className="aspect-[4/3] overflow-hidden">
               <img
                 src={s.img}
-                alt={s.alt}
+                title={s.alt} alt={s.alt}
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -229,7 +229,7 @@ function BlogCarousel() {
               <div className="aspect-[16/10] overflow-hidden">
                 <img
                   src={p.image}
-                  alt={p.imageAlt}
+                  title={p.imageAlt} alt={p.imageAlt}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -288,7 +288,7 @@ function Sectors() {
           >
             <img
               src={s.img}
-              alt={s.alt}
+              title={s.alt} alt={s.alt}
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover"
             />

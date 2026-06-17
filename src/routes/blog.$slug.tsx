@@ -135,7 +135,7 @@ function BlogPostPage() {
         <figure className="overflow-hidden rounded-lg border border-border">
           <img
             src={post.image}
-            alt={post.imageAlt}
+            title={post.imageAlt} alt={post.imageAlt}
             className="h-full w-full object-cover"
           />
           <figcaption className="border-t border-border bg-card px-4 py-2 text-xs text-muted-foreground">
@@ -225,7 +225,7 @@ function BlogPostPage() {
                   <div className="aspect-[16/10] overflow-hidden">
                     <img
                       src={r.image}
-                      alt={r.imageAlt}
+                      title={r.imageAlt} alt={r.imageAlt}
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
