@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SITE, BLOG_POSTS } from "../lib/site";
+import { IMG } from "../lib/images";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,20 +29,20 @@ export const Route = createFileRoute("/")({
 const services = [
   {
     title: "Suspended & T-Bar Ceilings",
-    img: "/images/service-ceilings.png",
-    alt: "Suspended T-bar ceiling grid with acoustic tiles installed in a Vancouver commercial space.",
+    img: IMG.serviceCeilings,
+    alt: "Suspended T-bar ceiling grid with white acoustic tiles and recessed LED lighting installed in a Vancouver commercial office.",
     body: "Acoustic grids, mineral fiber tile, metal pan, concealed spline and wood-look ceilings for offices, retail, restaurants and residential basements.",
   },
   {
     title: "Drywall Boarding, Taping & Finishing",
-    img: "/images/service-drywall.png",
-    alt: "Drywall boarding and Level 5 taping inside a custom home in the Lower Mainland.",
+    img: IMG.serviceDrywall,
+    alt: "Smooth Level 5 drywall finish on a custom home interior wall in the Lower Mainland, ready for paint under raking natural light.",
     body: "Level 1 through Level 5 finishing, fire-rated assemblies, shaft walls, and ready-for-paint custom home work that holds up under raking light.",
   },
   {
     title: "Steel Stud Framing",
-    img: "/images/service-framing.png",
-    alt: "Light-gauge steel stud framing in a Vancouver condo renovation, ready for drywall.",
+    img: IMG.serviceFraming,
+    alt: "Light-gauge galvanized steel stud framing installed at 16 inches on centre inside a Vancouver high-rise condo renovation.",
     body: "Heavy-gauge structural framing and interior partitions for condo renovations, tenant fit-outs and ground-up commercial.",
   },
 ];
@@ -49,20 +50,21 @@ const services = [
 const sectors = [
   {
     title: "Tenant Improvements",
-    img: "/images/sector-tenant.png",
-    alt: "Vancouver tenant improvement build-out with demising walls and suspended ceiling.",
+    img: IMG.sectorTenant,
+    alt: "Vancouver tenant improvement build-out in progress with steel stud demising walls and a suspended T-bar ceiling grid.",
   },
   {
     title: "Warehouses & Industrial",
-    img: "/images/sector-warehouse.png",
-    alt: "Warehouse ceiling and demising wall installation by Rambo Walls in the Lower Mainland.",
+    img: IMG.sectorWarehouse,
+    alt: "Industrial warehouse interior with suspended ceiling and steel stud demising wall installed by Rambo Walls in the Lower Mainland.",
   },
   {
     title: "Custom Homes & Condos",
-    img: "/images/hero-construction.png",
-    alt: "Custom home interior with steel stud framing and drywall finishing in progress.",
+    img: IMG.hero,
+    alt: "Custom home interior under construction with steel stud framing and drywall in progress, Vancouver BC.",
   },
 ];
+
 
 function HomePage() {
   return (
@@ -81,7 +83,7 @@ function Hero() {
     <section className="relative overflow-hidden">
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center opacity-40"
-        style={{ backgroundImage: "url(/images/hero-construction.png)" }}
+        style={{ backgroundImage: `url(${IMG.hero})` }}
         aria-hidden
       />
       <div
@@ -149,7 +151,7 @@ function Services() {
             <div className="aspect-[4/3] overflow-hidden">
               <img
                 src={s.img}
-                alt={s.alt}
+                title={s.alt} alt={s.alt}
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -227,7 +229,7 @@ function BlogCarousel() {
               <div className="aspect-[16/10] overflow-hidden">
                 <img
                   src={p.image}
-                  alt={p.imageAlt}
+                  title={p.imageAlt} alt={p.imageAlt}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -286,7 +288,7 @@ function Sectors() {
           >
             <img
               src={s.img}
-              alt={s.alt}
+              title={s.alt} alt={s.alt}
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover"
             />
