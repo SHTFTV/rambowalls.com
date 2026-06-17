@@ -1,5 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { SITE } from "../lib/site";
+import { SITE, type BlogPost } from "../lib/site";
+import type { BlogContent } from "../lib/blog-content";
 import { getBlogPost, getBlogContent, getRelatedPosts } from "../lib/blog-content";
 
 export const Route = createFileRoute("/blog/$slug")({
@@ -96,7 +97,8 @@ export const Route = createFileRoute("/blog/$slug")({
 });
 
 function BlogPostPage() {
-  const { post, content } = Route.useLoaderData();
+  const data = Route.useLoaderData() as { post: BlogPost; content: BlogContent };
+  const { post, content } = data;
   const related = getRelatedPosts(post.slug);
 
   return (
