@@ -1,4 +1,6 @@
 import { IMG } from "./images";
+
+export const SITE = {
   name: "Rambo Walls & Ceilings",
   phone: "778-773-2790",
   phoneHref: "tel:+17787732790",
@@ -70,7 +72,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "What a tenant improvements contractor actually does in Vancouver — permits, base-building coordination, demising walls, ceilings, and turnover that keeps the landlord happy.",
     excerpt:
       "A Vancouver tenant improvement lives or dies on schedule and coordination. Here's how Rambo Walls runs the walls, ceilings, and framing scope on a TI.",
-    image: "/images/sector-tenant.png",
+    image: IMG.sectorTenant,
     imageAlt:
       "Vancouver tenant improvement build-out in progress with steel stud demising walls and suspended ceiling grid.",
     category: "Tenant Improvements",
