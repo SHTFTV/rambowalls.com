@@ -87,10 +87,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_CA" },
       { property: "og:image", content: IMG.og },
-      { property: "og:image:alt", content: "Rambo Walls & Ceilings — commercial walls, ceilings and steel stud framing contractor, Vancouver and the Lower Mainland." },
+      {
+        property: "og:image:alt",
+        content:
+          "Rambo Walls & Ceilings — commercial walls, ceilings and steel stud framing contractor, Vancouver and the Lower Mainland.",
+      },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: IMG.og },
-      { name: "twitter:image:alt", content: "Rambo Walls & Ceilings — commercial contractor, Vancouver BC." },
+      {
+        name: "twitter:image:alt",
+        content: "Rambo Walls & Ceilings — commercial contractor, Vancouver BC.",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -108,26 +115,51 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "@id": "#business",
-          name: SITE.name,
-          description:
-            "Commercial walls and ceilings contractor specializing in suspended ceilings, drywall, and steel stud framing across the Lower Mainland of British Columbia.",
-          telephone: "+1-778-773-2790",
-          email: SITE.email,
-          priceRange: "$$",
-          address: {
-            "@type": "PostalAddress",
-            addressRegion: "BC",
-            addressCountry: "CA",
-            addressLocality: "Vancouver",
-          },
-          areaServed: [
-            "Vancouver", "Burnaby", "Surrey", "Richmond", "Coquitlam",
-            "Langley", "Delta", "North Vancouver", "West Vancouver",
-            "New Westminster", "Port Coquitlam", "Port Moody",
-            "Maple Ridge", "Pitt Meadows", "White Rock", "Abbotsford",
-          ].map((c) => ({ "@type": "City", name: c })),
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://www.rambowalls.com/#website",
+              url: "https://www.rambowalls.com/",
+              name: SITE.name,
+              publisher: { "@id": "https://www.rambowalls.com/#business" },
+            },
+            {
+              "@type": "LocalBusiness",
+              "@id": "https://www.rambowalls.com/#business",
+              name: SITE.name,
+              url: "https://www.rambowalls.com/",
+              image: IMG.og,
+              description:
+                "Commercial walls and ceilings contractor specializing in suspended ceilings, drywall, and steel stud framing across the Lower Mainland of British Columbia.",
+              telephone: "+1-778-773-2790",
+              email: SITE.email,
+              priceRange: "$$",
+              address: {
+                "@type": "PostalAddress",
+                addressRegion: "BC",
+                addressCountry: "CA",
+                addressLocality: "Vancouver",
+              },
+              areaServed: [
+                "Vancouver",
+                "Burnaby",
+                "Surrey",
+                "Richmond",
+                "Coquitlam",
+                "Langley",
+                "Delta",
+                "North Vancouver",
+                "West Vancouver",
+                "New Westminster",
+                "Port Coquitlam",
+                "Port Moody",
+                "Maple Ridge",
+                "Pitt Meadows",
+                "White Rock",
+                "Abbotsford",
+              ].map((c) => ({ "@type": "City", name: c })),
+            },
+          ],
         }),
       },
     ],
@@ -182,11 +214,28 @@ function SiteHeader() {
           </span>
         </Link>
         <nav className="hidden items-center gap-7 text-sm font-medium text-muted-foreground md:flex">
-          <a href="/#services" className="hover:text-foreground">Services</a>
-          <a href="/#sectors" className="hover:text-foreground">Sectors</a>
-          <Link to="/blog" className="hover:text-foreground">Blog</Link>
-          <a href="/#contact" className="hover:text-foreground">Contact</a>
+          <a href="/#services" className="hover:text-foreground">
+            Services
+          </a>
+          <Link to="/projects" className="hover:text-foreground">
+            Projects
+          </Link>
+          <a href="/#sectors" className="hover:text-foreground">
+            Sectors
+          </a>
+          <Link to="/blog" className="hover:text-foreground">
+            Blog
+          </Link>
+          <a href="/#contact" className="hover:text-foreground">
+            Contact
+          </a>
         </nav>
+        <Link
+          to="/projects"
+          className="text-sm font-semibold text-muted-foreground hover:text-foreground md:hidden"
+        >
+          Projects
+        </Link>
         <a
           href={SITE.phoneHref}
           className="hidden rounded-md px-4 py-2 text-sm font-semibold text-brand-foreground sm:inline-flex"
@@ -208,13 +257,18 @@ function SiteFooter() {
             RAMBO <span style={{ color: "var(--brand)" }}>WALLS</span>
           </div>
           <p className="mt-3 max-w-xs text-sm text-muted-foreground">
-            Commercial walls, ceilings and steel stud framing across Vancouver
-            and the Lower Mainland.
+            Commercial walls, ceilings and steel stud framing across Vancouver and the Lower
+            Mainland.
           </p>
         </div>
         <div>
           <h4 className="text-sm font-semibold text-foreground">Services</h4>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+            <li>
+              <Link to="/projects" className="hover:text-foreground">
+                Project Gallery
+              </Link>
+            </li>
             <li>Suspended &amp; T-Bar Ceilings</li>
             <li>Drywall Boarding &amp; Taping</li>
             <li>Steel Stud Framing</li>
@@ -225,9 +279,8 @@ function SiteFooter() {
         <div>
           <h4 className="text-sm font-semibold text-foreground">Areas Served</h4>
           <p className="mt-3 text-sm text-muted-foreground">
-            Vancouver, Burnaby, Surrey, Richmond, Coquitlam, Langley, Delta,
-            North &amp; West Vancouver, New Westminster, Port Moody, Maple
-            Ridge, White Rock, Abbotsford.
+            Vancouver, Burnaby, Surrey, Richmond, Coquitlam, Langley, Delta, North &amp; West
+            Vancouver, New Westminster, Port Moody, Maple Ridge, White Rock, Abbotsford.
           </p>
         </div>
         <div>
