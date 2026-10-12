@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { SITE, BLOG_POSTS } from "../lib/site";
 import { IMG } from "../lib/images";
 import {
+  RECENT_PROJECT_PHOTOS,
   BEATTY_PROJECT_PHOTOS,
   FEATURED_PROJECT_PHOTOS,
   RWC_ARCHIVE_PHOTOS,
@@ -71,12 +72,13 @@ const sectors = [
 ];
 
 const projectPreviewPhotos = [
+  RECENT_PROJECT_PHOTOS[0],
+  RECENT_PROJECT_PHOTOS[1],
+  RECENT_PROJECT_PHOTOS[3],
   FEATURED_PROJECT_PHOTOS[0],
   FEATURED_PROJECT_PHOTOS[1],
   FEATURED_PROJECT_PHOTOS[4],
-  BEATTY_PROJECT_PHOTOS[6],
-  RWC_ARCHIVE_PHOTOS[14],
-  RWC_ARCHIVE_PHOTOS[34],
+
 ];
 
 function HomePage() {
@@ -120,9 +122,9 @@ function ProjectsPreview() {
           {projectPreviewPhotos.map((photo) => (
             <Link
               key={photo.src}
-              to="/projects"
+              to={photo.projectUrl ?? "/projects"}
               className="group relative aspect-[4/3] overflow-hidden rounded-lg border border-border bg-card"
-              aria-label={`Open project gallery: ${photo.alt}`}
+              aria-label={`View project: ${photo.alt}`}
             >
               <img
                 src={photo.src}
@@ -135,6 +137,7 @@ function ProjectsPreview() {
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent px-4 pb-4 pt-12">
                 <p className="text-sm font-semibold text-white">{photo.title ?? photo.category}</p>
                 {photo.project && <p className="mt-1 text-xs text-white/70">{photo.project}</p>}
+                {photo.credit && <p className="mt-1 text-xs text-white/70">{photo.credit}</p>}
               </div>
             </Link>
           ))}
