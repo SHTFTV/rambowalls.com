@@ -9,91 +9,58 @@ export type BlogContent = {
 
 export const BLOG_CONTENT: Record<string, BlogContent> = {
 "club-champion-steel-stud-framing-drywall-surrey": {
-  "intro": "Rambo Wall & Ceiling Limited carried out the steel stud framing and drywall work for the Club Champion tenant improvement at Semiahmoo Shopping Centre, 1701 152nd Street in Surrey. White Knight Construction Ltd. was the general contractor. These October construction photographs show Rambo\u2019s part of the retail fit-out, from exposed framing and backing to boarded interior walls.",
+  "intro": "Rambo Wall & Ceiling Limited carried out framing and drywall at Club Champion in Semiahmoo Shopping Centre, Surrey, under general contractor White Knight Construction Ltd. The photographs show the interior walls during construction.",
   "sections": [
     {
-      "heading": "Full-height steel stud partitions",
+      "heading": "Compare the whole finishing package",
       "paragraphs": [
-        "The framing package was defined around full-height walls extending to the underside of the deck. Rambo\u2019s original estimate included supply and installation of steel framing, with wood backing at door openings except for removable partition door assemblies.",
-        "The exposed framing photographs show why this stage matters: wall layout, openings, backing and building services meet in the same space before drywall closes the cavities. The wall schedule and coordination with the project team set the requirements for each assembly."
+        "Rambo’s original estimate included drywall on both sides of the walls, wall insulation and Level 4 finishing. For your own project, ask whether the quote includes insulation, taping, finishing, opening details and preparation for painting.",
+        "Lighting and paint choice affect the finish you may need. Show your contractor any areas with large windows, strong side lighting or decorative finishes so expectations are clear."
       ]
     },
     {
-      "heading": "Drywall and insulation as a coordinated scope",
+      "heading": "Prepare for your own renovation",
       "paragraphs": [
-        "The original drywall package included one layer of 1/2-inch board on each side of the walls, wall insulation and Level 4 finishing. The photographs show boarded walls during construction; they are a record of the work in progress, rather than a claim that the complete tenant improvement had reached final handover.",
-        "Keeping framing and drywall within a coordinated trade scope gives the team a practical opportunity to resolve backing and opening details before boarding. It also makes the handoff from open walls to finishing easier to follow."
-      ]
-    },
-    {
-      "heading": "Kudos to White Knight Construction",
-      "paragraphs": [
-        "Kudos to White Knight Construction Ltd., the general contractor on this Club Champion tenant improvement, and the wider project team. Rambo\u2019s contribution was the framing and drywall trade work within their build-out.",
-        "Clear allocation of site responsibilities supports that coordination. During pricing, the GC advised that the lift, site waste bin and inspections would be covered through their team. Those decisions help define the boundaries of a subcontractor\u2019s package."
-      ]
-    },
-    {
-      "heading": "Planning a similar commercial interior",
-      "paragraphs": [
-        "Send the current architectural drawings, wall schedule, site address and required sequence when requesting a framing and drywall quote. Identify full-height partitions, door backing, board layers, insulation and the intended finish before comparing bids.",
-        "If ceiling work is part of your fit-out, list it as a separate scope. Rambo\u2019s initial Club Champion estimate also included an acoustic T-bar ceiling package, but the photographs featured here document the framing and drywall work."
+        "Send your site address, drawings or photos, the rooms involved and your preferred schedule. Mention access restrictions and whether the business will be open during construction.",
+        "Kudos to general contractor White Knight Construction and Rambo for their contributions to the Club Champion project. Follow the project link for more construction photographs and Rambo’s account."
       ]
     }
   ],
   "faq": [
     {
-      "q": "Who framed and drywalled Club Champion at Semiahmoo?",
-      "a": "Rambo Wall & Ceiling Limited carried out the steel stud framing and drywall work. White Knight Construction Ltd. was the general contractor."
-    },
-    {
-      "q": "Where is this project?",
-      "a": "Club Champion at Semiahmoo Shopping Centre, 1701 152nd Street, Surrey, British Columbia."
-    },
-    {
-      "q": "What drywall finish was quoted?",
-      "a": "Rambo\u2019s original estimate specified Level 4 drywall finishing and wall insulation. The construction photographs do not establish the final finish acceptance or handover status."
+      "q": "What should I include in a renovation enquiry?",
+      "a": "Send your site address, drawings or photos, the changes you want and your preferred timeline. Mention any access restrictions or occupied areas."
     }
   ]
 },
-"regus-mission-drywall-project":{
-  "intro": "Matt McKenzie supplied these photographs of Rambo’s drywall work at the Regus project, 31999 Lougheed Highway in Mission. The October images show partitions, openings and window returns while the commercial interior was under construction.",
+"regus-mission-drywall-project": {
+  "intro": "New partitions help organise offices, meeting rooms and customer areas. These photos show Rambo’s drywall work during construction at the Regus project, 31999 Lougheed Highway in Mission, along with framing and taping views from the site.",
   "sections": [
     {
-      "heading": "October 12 update: framing and taping photos from the same address",
+      "heading": "Pay attention to windows and doorways",
       "paragraphs": [
-        "Matt’s companion photo emails identify framing before drywall and taping at 31999 Lougheed Highway in Mission. These September views are shown as address-labelled site progress alongside the October set he explicitly identified as Regus drywall.",
-        "The open-wall photographs show steel stud partitions beneath existing services; the taping views show joint treatment during construction. They provide useful scope context, while the supplied correspondence confirms Rambo’s drywall contribution and does not identify the framing installer or general contractor."
+        "Drywall work includes more than the large flat walls. The window-detail photograph shows board fitted beside glazing, where neat edges and transitions matter to the finished appearance.",
+        "When asking for a quote, include window returns, door openings and areas where new walls meet existing surfaces. Ask whether trims, repairs and preparation for painting are included so you can compare estimates fairly."
       ]
     },
     {
-      "heading": "Drywall around openings and existing services",
+      "heading": "Choose the finish for your space",
       "paragraphs": [
-        "The selected views show new boarded surfaces alongside exposed building structure and overhead services. Window returns and changes in wall direction make the drywall scope more detailed than a simple uninterrupted partition.",
-        "These photographs document the construction stage. They do not establish a final completion date, acoustic rating or finish level for the Regus project."
+        "Discuss your paint choice and lighting with your contractor. Large windows and strong side lighting can make surface imperfections more noticeable, so agree on the intended finish before work begins.",
+        "Ask how boarding, taping and drying time will fit the schedule. The photos show construction stages, rather than a finished office; they are useful examples of the work that happens before decorating."
       ]
     },
     {
-      "heading": "What to define before quoting commercial drywall",
+      "heading": "Tell us what you want to change",
       "paragraphs": [
-        "A useful drywall enquiry includes the wall schedule, heights, board layers, insulation requirements, opening details and finish expectations. Existing services and access conditions also affect how the work can be sequenced.",
-        "For an office interior, confirm the required backing, ceiling interfaces and any wall performance requirements with the project team before the walls are closed. Rambo can review the framing and drywall package against the supplied drawings."
-      ]
-    },
-    {
-      "heading": "Project photographs from the field",
-      "paragraphs": [
-        "Photos were supplied by Matt McKenzie of Rambo Wall & Ceiling Limited. The October photos were labelled Regus drywall; the September framing and taping photos were labelled with the same Mission address. No finish level, rating, completion date or GC attribution is established by these photos."
+        "For your enquiry, send the property location, a few photos or drawings, the rooms involved and your preferred timeline. Mention any occupied areas so access and disruption can be discussed before work is priced."
       ]
     }
   ],
   "faq": [
     {
-      "q": "Where was this Regus drywall work photographed?",
-      "a": "Matt identified the project as Regus at 31999 Lougheed Highway in Mission, British Columbia."
-    },
-    {
-      "q": "Do these images show a completed office?",
-      "a": "They show drywall work during construction. Final completion and occupancy are not established by these photographs."
+      "q": "What should I include in a renovation enquiry?",
+      "a": "Send your site address, drawings or photos, the changes you want and your preferred timeline. Mention any access restrictions or occupied areas."
     }
   ]
 },
