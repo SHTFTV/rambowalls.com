@@ -112,7 +112,7 @@ function ProjectsPreview() {
             className="rounded-md px-5 py-3 text-sm font-semibold text-brand-foreground"
             style={{ backgroundColor: "var(--brand)" }}
           >
-            View all 57 photos →
+            View the project gallery →
           </Link>
         </div>
 

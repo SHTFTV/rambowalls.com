@@ -23,6 +23,28 @@ export type BlogPost = {
 };
 
 export const BLOG_POSTS: BlogPost[] = [
+{
+  "slug": "club-champion-steel-stud-framing-drywall-surrey",
+  "title": "Club Champion at Semiahmoo: Steel Stud Framing & Drywall",
+  "description": "Rambo\u2019s steel stud framing and drywall work for the Club Champion tenant improvement in Surrey, with White Knight Construction as general contractor.",
+  "excerpt": "Full-height partitions, door backing and drywall: a look at Rambo\u2019s trade scope on the Club Champion retail fit-out at Semiahmoo Shopping Centre.",
+  "image": "/projects/club-champion/drywall-wide.webp",
+  "imageAlt": "Drywall partitions during the Club Champion tenant improvement at Semiahmoo in Surrey. Photo supplied by Matt McKenzie, Rambo Wall & Ceiling Limited.",
+  "category": "Steel Stud Framing",
+  "date": "2026-10-11",
+  "readMinutes": 4
+},
+{
+  "slug": "regus-mission-drywall-project",
+  "title": "Regus in Mission: Drywall Work at 31999 Lougheed Highway",
+  "description": "Photographs of Rambo\u2019s drywall work at the Regus project in Mission, showing interior partitions and window returns during construction.",
+  "excerpt": "A field update from the Regus project at 31999 Lougheed Highway in Mission, with construction photographs supplied by Rambo\u2019s Matt McKenzie.",
+  "image": "/projects/mission-lougheed/drywall.webp",
+  "imageAlt": "Drywall partitions and openings at the Regus project in Mission. Photo supplied by Matt McKenzie, Rambo Wall & Ceiling Limited.",
+  "category": "Commercial Drywall",
+  "date": "2026-10-11",
+  "readMinutes": 3
+},
   {
     slug: "steel-stud-framing-condo-renovations-vancouver",
     title: "Steel Stud Framing for Residential Condo Renovations & Drywall in Vancouver",

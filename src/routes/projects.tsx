@@ -50,7 +50,7 @@ export const Route = createFileRoute("/projects")({
       {
         name: "description",
         content:
-          "Browse 57 real Rambo Walls & Ceilings project photos: acoustic panels, T-bar and suspended ceilings, specialty ceilings, drywall and steel stud framing across commercial interiors.",
+          "Browse real Rambo Walls & Ceilings project photos: acoustic panels, T-bar and suspended ceilings, specialty ceilings, drywall and steel stud framing across commercial interiors.",
       },
       {
         property: "og:title",
@@ -59,7 +59,7 @@ export const Route = createFileRoute("/projects")({
       {
         property: "og:description",
         content:
-          "57 real project photographs covering acoustic systems, suspended ceilings, specialty ceilings and commercial interior framing.",
+          "Real project photographs covering acoustic systems, suspended ceilings, specialty ceilings and commercial interior framing.",
       },
       { property: "og:url", content: PAGE_URL },
       { property: "og:type", content: "website" },
@@ -147,8 +147,9 @@ function ProjectsPage() {
             REAL RWC PROJECTS
           </p>
           <h1 className="mt-2 max-w-4xl text-5xl leading-none sm:text-7xl">Project gallery</h1>
+          <figure className="mt-8 max-w-4xl"><img src="/projects/club-champion/drywall-wide.webp" alt="Drywall partitions during Rambo’s Club Champion tenant improvement scope in Surrey." width="1800" height="1013" className="w-full rounded-lg" /><figcaption className="mt-2 text-xs text-muted-foreground">Club Champion framing and drywall work in Surrey. Photo: Matt McKenzie / Rambo Wall &amp; Ceiling Limited.</figcaption></figure>
           <p className="mt-5 max-w-3xl text-base text-muted-foreground sm:text-lg">
-            57 photographs from Rambo Walls &amp; Ceilings projects. Select any photo to open it
+            {PROJECT_PHOTOS.length} photographs from Rambo Walls &amp; Ceilings projects. Select any photo to open it
             full size. Project names and locations are shown only where they have been confirmed.
           </p>
         </div>
@@ -184,8 +185,8 @@ function ProjectsPage() {
 
         <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
           {visiblePhotos.map((photo, index) => (
+            <div key={photo.src} className="overflow-hidden rounded-lg border border-border bg-card">
             <button
-              key={photo.src}
               type="button"
               onClick={() => setSelectedIndex(index)}
               className="group overflow-hidden rounded-lg border border-border bg-card text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
@@ -210,6 +211,9 @@ function ProjectsPage() {
                 </div>
               )}
             </button>
+            {photo.credit && <p className="px-3 pb-2 text-xs text-muted-foreground">{photo.credit}</p>}
+            {photo.projectUrl && <a href={photo.projectUrl} className="block px-3 pb-4 text-sm font-semibold underline">Read the project story →</a>}
+            </div>
           ))}
         </div>
       </section>
@@ -256,6 +260,8 @@ function ProjectsPage() {
               )}
               {selectedPhoto.project && <span>{selectedPhoto.project}. </span>}
               <span>{selectedPhoto.alt}</span>
+              {selectedPhoto.credit && <span className="block mt-2">{selectedPhoto.credit}</span>}
+              {selectedPhoto.projectUrl && <a className="block mt-2 underline" href={selectedPhoto.projectUrl}>Read the project story →</a>}
             </figcaption>
           </figure>
 

@@ -15,6 +15,8 @@ export type ProjectPhoto = {
   project?: string;
   location?: string;
   date?: string;
+  projectUrl?: string;
+  credit?: string;
 };
 
 const archive = (
@@ -376,7 +378,66 @@ export const RWC_ARCHIVE_PHOTOS: ProjectPhoto[] = [
   ),
 ];
 
+export const RECENT_PROJECT_PHOTOS: ProjectPhoto[] = [
+  {
+    "src": "/projects/club-champion/steel-stud-framing.webp",
+    "alt": "Full-height steel stud framing and backing before drywall at Club Champion in Surrey.",
+    "category": "Steel stud framing & interiors",
+    "title": "Club Champion framing & drywall",
+    "project": "Club Champion \u2014 Semiahmoo",
+    "location": "Surrey, BC",
+    "date": "October 2026",
+    "projectUrl": "/blog/club-champion-steel-stud-framing-drywall-surrey",
+    "credit": "Photo: Matt McKenzie / Rambo Wall & Ceiling Limited"
+  },
+  {
+    "src": "/projects/club-champion/drywall-wide.webp",
+    "alt": "Boarded interior partitions during the Club Champion retail tenant improvement.",
+    "category": "Steel stud framing & interiors",
+    "title": "Club Champion framing & drywall",
+    "project": "Club Champion \u2014 Semiahmoo",
+    "location": "Surrey, BC",
+    "date": "October 2026",
+    "projectUrl": "/blog/club-champion-steel-stud-framing-drywall-surrey",
+    "credit": "Photo: Matt McKenzie / Rambo Wall & Ceiling Limited"
+  },
+  {
+    "src": "/projects/club-champion/drywall-interior.webp",
+    "alt": "Drywall installation around openings at Club Champion, Semiahmoo Shopping Centre.",
+    "category": "Steel stud framing & interiors",
+    "title": "Club Champion framing & drywall",
+    "project": "Club Champion \u2014 Semiahmoo",
+    "location": "Surrey, BC",
+    "date": "October 2026",
+    "projectUrl": "/blog/club-champion-steel-stud-framing-drywall-surrey",
+    "credit": "Photo: Matt McKenzie / Rambo Wall & Ceiling Limited"
+  },
+  {
+    "src": "/projects/mission-lougheed/drywall.webp",
+    "alt": "Drywall partitions at the Regus project in Mission during construction.",
+    "category": "Steel stud framing & interiors",
+    "title": "Regus Mission drywall",
+    "project": "Regus \u2014 31999 Lougheed Highway",
+    "location": "Mission, BC",
+    "date": "October 2026",
+    "projectUrl": "/blog/regus-mission-drywall-project",
+    "credit": "Photo: Matt McKenzie / Rambo Wall & Ceiling Limited"
+  },
+  {
+    "src": "/projects/mission-lougheed/window-detail.webp",
+    "alt": "Drywall return beside a window at the Regus project, 31999 Lougheed Highway, Mission.",
+    "category": "Steel stud framing & interiors",
+    "title": "Regus Mission drywall",
+    "project": "Regus \u2014 31999 Lougheed Highway",
+    "location": "Mission, BC",
+    "date": "October 2026",
+    "projectUrl": "/blog/regus-mission-drywall-project",
+    "credit": "Photo: Matt McKenzie / Rambo Wall & Ceiling Limited"
+  }
+];
+
 export const PROJECT_PHOTOS: ProjectPhoto[] = [
+  ...RECENT_PROJECT_PHOTOS,
   ...FEATURED_PROJECT_PHOTOS,
   ...BEATTY_PROJECT_PHOTOS,
   ...RWC_ARCHIVE_PHOTOS,

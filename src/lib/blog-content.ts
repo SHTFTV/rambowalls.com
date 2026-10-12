@@ -8,6 +8,88 @@ export type BlogContent = {
 };
 
 export const BLOG_CONTENT: Record<string, BlogContent> = {
+"club-champion-steel-stud-framing-drywall-surrey": {
+  "intro": "Rambo Wall & Ceiling Limited carried out the steel stud framing and drywall work for the Club Champion tenant improvement at Semiahmoo Shopping Centre, 1701 152nd Street in Surrey. White Knight Construction Ltd. was the general contractor. These October construction photographs show Rambo\u2019s part of the retail fit-out, from exposed framing and backing to boarded interior walls.",
+  "sections": [
+    {
+      "heading": "Full-height steel stud partitions",
+      "paragraphs": [
+        "The framing package was defined around full-height walls extending to the underside of the deck. Rambo\u2019s original estimate included supply and installation of steel framing, with wood backing at door openings except for removable partition door assemblies.",
+        "The exposed framing photographs show why this stage matters: wall layout, openings, backing and building services meet in the same space before drywall closes the cavities. The wall schedule and coordination with the project team set the requirements for each assembly."
+      ]
+    },
+    {
+      "heading": "Drywall and insulation as a coordinated scope",
+      "paragraphs": [
+        "The original drywall package included one layer of 1/2-inch board on each side of the walls, wall insulation and Level 4 finishing. The photographs show boarded walls during construction; they are a record of the work in progress, rather than a claim that the complete tenant improvement had reached final handover.",
+        "Keeping framing and drywall within a coordinated trade scope gives the team a practical opportunity to resolve backing and opening details before boarding. It also makes the handoff from open walls to finishing easier to follow."
+      ]
+    },
+    {
+      "heading": "Kudos to White Knight Construction",
+      "paragraphs": [
+        "Kudos to White Knight Construction Ltd., the general contractor on this Club Champion tenant improvement, and the wider project team. Rambo\u2019s contribution was the framing and drywall trade work within their build-out.",
+        "Clear allocation of site responsibilities supports that coordination. During pricing, the GC advised that the lift, site waste bin and inspections would be covered through their team. Those decisions help define the boundaries of a subcontractor\u2019s package."
+      ]
+    },
+    {
+      "heading": "Planning a similar commercial interior",
+      "paragraphs": [
+        "Send the current architectural drawings, wall schedule, site address and required sequence when requesting a framing and drywall quote. Identify full-height partitions, door backing, board layers, insulation and the intended finish before comparing bids.",
+        "If ceiling work is part of your fit-out, list it as a separate scope. Rambo\u2019s initial Club Champion estimate also included an acoustic T-bar ceiling package, but the photographs featured here document the framing and drywall work."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Who framed and drywalled Club Champion at Semiahmoo?",
+      "a": "Rambo Wall & Ceiling Limited carried out the steel stud framing and drywall work. White Knight Construction Ltd. was the general contractor."
+    },
+    {
+      "q": "Where is this project?",
+      "a": "Club Champion at Semiahmoo Shopping Centre, 1701 152nd Street, Surrey, British Columbia."
+    },
+    {
+      "q": "What drywall finish was quoted?",
+      "a": "Rambo\u2019s original estimate specified Level 4 drywall finishing and wall insulation. The construction photographs do not establish the final finish acceptance or handover status."
+    }
+  ]
+},
+"regus-mission-drywall-project": {
+  "intro": "Matt McKenzie supplied these photographs of Rambo\u2019s drywall work at the Regus project, 31999 Lougheed Highway in Mission. The October images show partitions, openings and window returns while the commercial interior was under construction.",
+  "sections": [
+    {
+      "heading": "Drywall around openings and existing services",
+      "paragraphs": [
+        "The selected views show new boarded surfaces alongside exposed building structure and overhead services. Window returns and changes in wall direction make the drywall scope more detailed than a simple uninterrupted partition.",
+        "These photographs document the construction stage. They do not establish a final completion date, acoustic rating or finish level for the Regus project."
+      ]
+    },
+    {
+      "heading": "What to define before quoting commercial drywall",
+      "paragraphs": [
+        "A useful drywall enquiry includes the wall schedule, heights, board layers, insulation requirements, opening details and finish expectations. Existing services and access conditions also affect how the work can be sequenced.",
+        "For an office interior, confirm the required backing, ceiling interfaces and any wall performance requirements with the project team before the walls are closed. Rambo can review the framing and drywall package against the supplied drawings."
+      ]
+    },
+    {
+      "heading": "Project photographs from the field",
+      "paragraphs": [
+        "Photos were supplied by Matt McKenzie of Rambo Wall & Ceiling Limited. This update uses the images he identified as the Regus drywall project; it makes no attribution for other trades or the general contractor."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Where was this Regus drywall work photographed?",
+      "a": "Matt identified the project as Regus at 31999 Lougheed Highway in Mission, British Columbia."
+    },
+    {
+      "q": "Do these images show a completed office?",
+      "a": "They show drywall work during construction. Final completion and occupancy are not established by these photographs."
+    }
+  ]
+},
   "steel-stud-framing-condo-renovations-vancouver": {
     intro:
       "If you've cracked open a Vancouver condo in the last five years, you've probably noticed the wood is missing. Where renovators used to slap up 2x4s, the framing is now light-gauge galvanized steel — straight, dry, screwed instead of nailed, and stamped with the manufacturer's name. That shift didn't happen by accident. Strata bylaws, fire code, acoustic ratings, and the simple reality of moving material into a 28-storey tower have made steel stud framing the default for residential condo renovations across Vancouver and the Lower Mainland. This guide walks through why, how, and what to watch for when planning your renovation — and how Rambo Walls & Ceilings runs the framing-and-drywall scope on suite-level work from Yaletown to Brentwood.",

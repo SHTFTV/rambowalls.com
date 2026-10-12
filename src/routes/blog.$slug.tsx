@@ -13,7 +13,7 @@ export const Route = createFileRoute("/blog/$slug")({
   head: ({ params, loaderData }) => {
     if (!loaderData) return { meta: [{ title: "Post not found" }] };
     const { post } = loaderData;
-    const url = `/blog/${params.slug}`;
+    const url = `https://www.rambowalls.com/blog/${params.slug}`;
     return {
       meta: [
         { title: `${post.title} | Rambo Walls & Ceilings` },
@@ -22,8 +22,8 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:description", content: post.description },
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },
-        { property: "og:image", content: post.image },
-        { name: "twitter:image", content: post.image },
+        { property: "og:image", content: `https://www.rambowalls.com${post.image}` },
+        { name: "twitter:image", content: `https://www.rambowalls.com${post.image}` },
         { name: "article:section", content: post.category },
         { name: "article:published_time", content: post.date },
       ],
@@ -36,7 +36,7 @@ export const Route = createFileRoute("/blog/$slug")({
             "@type": "Article",
             headline: post.title,
             description: post.description,
-            image: post.image,
+            image: `https://www.rambowalls.com${post.image}`,
             datePublished: post.date,
             dateModified: post.date,
             author: { "@type": "Organization", name: SITE.name },
@@ -125,6 +125,7 @@ function BlogPostPage() {
             {post.category.toUpperCase()} · {post.readMinutes} MIN READ
           </p>
           <h1 className="mt-3 text-4xl leading-tight sm:text-6xl">{post.title}</h1>
+          <p className="mt-4 text-sm text-muted-foreground">{SITE.name} · {post.date}</p>
           <p className="mt-5 max-w-2xl text-lg text-muted-foreground">
             {post.description}
           </p>
@@ -146,6 +147,9 @@ function BlogPostPage() {
         <div className="prose-content mt-10 space-y-10 text-base leading-relaxed text-foreground">
           <p className="text-lg text-muted-foreground">{content.intro}</p>
 
+          {post.slug === "club-champion-steel-stud-framing-drywall-surrey" && <section aria-label="Club Champion project photographs" className="grid gap-6 sm:grid-cols-2">{[{src:"steel-stud-framing",alt:"Steel stud wall framing with backing and services before boarding."},{src:"drywall-interior",alt:"Drywall partitions and openings during the retail fit-out."}].map(photo => <figure key={photo.src}><img src={`/projects/club-champion/${photo.src}.webp`} alt={photo.alt} loading="lazy" className="w-full rounded-lg" /><figcaption className="mt-2 text-xs text-muted-foreground">{photo.alt} Photo: Matt McKenzie / Rambo Wall &amp; Ceiling Limited.</figcaption></figure>)}</section>}
+          {post.slug === "regus-mission-drywall-project" && <figure><img src="/projects/mission-lougheed/window-detail.webp" alt="Drywall window return at Regus in Mission." loading="lazy" className="w-full rounded-lg" /><figcaption className="mt-2 text-xs text-muted-foreground">Drywall window return during the Regus work in Mission. Photo: Matt McKenzie / Rambo Wall &amp; Ceiling Limited.</figcaption></figure>}
+          {post.slug === "club-champion-steel-stud-framing-drywall-surrey" && <p>General contractor: <a href="https://www.wkconstruction.ca/" className="underline">White Knight Construction Ltd.</a> · <a href="/projects" className="underline">View Rambo’s project gallery</a></p>}
           {content.sections.map((s) => (
             <section key={s.heading}>
               <h2 className="text-3xl sm:text-4xl">{s.heading}</h2>
