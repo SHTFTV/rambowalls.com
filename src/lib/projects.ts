@@ -433,7 +433,29 @@ export const RECENT_PROJECT_PHOTOS: ProjectPhoto[] = [
     "date": "October 2026",
     "projectUrl": "/blog/regus-mission-drywall-project",
     "credit": "Photo: Matt McKenzie / Rambo Wall & Ceiling Limited"
-  }
+  },
+{
+  "src": "/projects/mission-lougheed/framing.webp",
+  "alt": "Steel stud partitions before drywall at 31999 Lougheed Highway, Mission.",
+  "category": "Steel stud framing & interiors",
+  "title": "Mission site framing before drywall",
+  "project": "31999 Lougheed Highway",
+  "location": "Mission, BC",
+  "date": "September 2026",
+  "projectUrl": "/blog/regus-mission-drywall-project",
+  "credit": "Photo: Matt McKenzie / Rambo Wall & Ceiling Limited."
+},
+{
+  "src": "/projects/mission-lougheed/taping.webp",
+  "alt": "Taping-stage walls at 31999 Lougheed Highway, Mission.",
+  "category": "Steel stud framing & interiors",
+  "title": "Mission site taping",
+  "project": "31999 Lougheed Highway",
+  "location": "Mission, BC",
+  "date": "September 2026",
+  "projectUrl": "/blog/regus-mission-drywall-project",
+  "credit": "Photo: Matt McKenzie / Rambo Wall & Ceiling Limited."
+}
 ];
 
 export const PROJECT_PHOTOS: ProjectPhoto[] = [

@@ -55,9 +55,16 @@ export const BLOG_CONTENT: Record<string, BlogContent> = {
     }
   ]
 },
-"regus-mission-drywall-project": {
-  "intro": "Matt McKenzie supplied these photographs of Rambo\u2019s drywall work at the Regus project, 31999 Lougheed Highway in Mission. The October images show partitions, openings and window returns while the commercial interior was under construction.",
+"regus-mission-drywall-project":{
+  "intro": "Matt McKenzie supplied these photographs of Rambo’s drywall work at the Regus project, 31999 Lougheed Highway in Mission. The October images show partitions, openings and window returns while the commercial interior was under construction.",
   "sections": [
+    {
+      "heading": "October 12 update: framing and taping photos from the same address",
+      "paragraphs": [
+        "Matt’s companion photo emails identify framing before drywall and taping at 31999 Lougheed Highway in Mission. These September views are shown as address-labelled site progress alongside the October set he explicitly identified as Regus drywall.",
+        "The open-wall photographs show steel stud partitions beneath existing services; the taping views show joint treatment during construction. They provide useful scope context, while the supplied correspondence confirms Rambo’s drywall contribution and does not identify the framing installer or general contractor."
+      ]
+    },
     {
       "heading": "Drywall around openings and existing services",
       "paragraphs": [
@@ -75,7 +82,7 @@ export const BLOG_CONTENT: Record<string, BlogContent> = {
     {
       "heading": "Project photographs from the field",
       "paragraphs": [
-        "Photos were supplied by Matt McKenzie of Rambo Wall & Ceiling Limited. This update uses the images he identified as the Regus drywall project; it makes no attribution for other trades or the general contractor."
+        "Photos were supplied by Matt McKenzie of Rambo Wall & Ceiling Limited. The October photos were labelled Regus drywall; the September framing and taping photos were labelled with the same Mission address. No finish level, rating, completion date or GC attribution is established by these photos."
       ]
     }
   ],
