@@ -147,7 +147,7 @@ function ProjectsPage() {
             REAL RWC PROJECTS
           </p>
           <h1 className="mt-2 max-w-4xl text-5xl leading-none sm:text-7xl">Project gallery</h1>
-          <figure className="mt-8 max-w-4xl"><img src="/projects/club-champion/drywall-wide.webp" alt="Drywall partitions during Rambo’s Club Champion tenant improvement scope in Surrey." width="1800" height="1013" className="w-full rounded-lg" /><figcaption className="mt-2 text-xs text-muted-foreground">Club Champion framing and drywall work in Surrey. Photo: Matt McKenzie / Rambo Wall &amp; Ceiling Limited.</figcaption></figure>
+          <figure className="mt-8 max-w-4xl"><img src="/projects/club-champion/drywall-wide.webp" alt="Drywall partitions during Rambo’s Club Champion tenant improvement scope in Surrey." width="1800" height="1013" className="w-full rounded-lg" /><figcaption className="mt-2 text-xs text-muted-foreground">Club Champion framing and drywall work in Surrey. Photo: Mason McKenzie / Rambo Wall &amp; Ceiling Limited.</figcaption></figure>
           <p className="mt-5 max-w-3xl text-base text-muted-foreground sm:text-lg">
             {PROJECT_PHOTOS.length} photographs from Rambo Walls &amp; Ceilings projects. Select any photo to open it
             full size. Project names and locations are shown only where they have been confirmed.
