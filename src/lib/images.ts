@@ -8,7 +8,7 @@ export const IMG = {
   serviceCeilings: "/projects/rwc-archive/20211005_130715.jpg",
   serviceDrywall: "/projects/rwc-archive/img_6770-1.jpg",
   serviceFraming: "/projects/rwc-archive/img_6800.jpg",
-  og: "https://www.rambowalls.com/projects/rwc-featured/microsoft-acoustic-clouds-wide.jpg",
+  og: "https://www.rambowalls.com/og/rambo-share-v1.jpg",
   favicon: "/favicon.svg",
   favicon192: "/favicon.svg",
   favicon512: "/favicon.svg",
