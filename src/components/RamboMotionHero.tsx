@@ -26,7 +26,6 @@ export function RamboMotionHero({paused,onToggle}:{paused:boolean;onToggle:()=>v
     <video ref={videoRef} className="rambo-hero-film" src={RAMBO_HERO_VIDEO} poster={POSTER} muted loop playsInline preload="metadata" aria-hidden="true" tabIndex={-1}/>
     <div className="rambo-hero-veil" aria-hidden="true"/>
     <div className="rambo-hero-inner">
-      <img className="rambo-hero-wordmark" src="/brand-motion/rambo-wordmark.webp" width="3712" height="1152" alt="Rambo Wall & Ceiling" fetchPriority="high"/>
       <div className="rambo-hero-layout">
         <div className="rambo-hero-copy">
           <p className="rambo-kicker">VANCOUVER · LOWER MAINLAND · BC</p>
