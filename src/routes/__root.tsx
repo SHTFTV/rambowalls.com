@@ -105,8 +105,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/svg+xml", href: IMG.favicon },
-      { rel: "apple-touch-icon", href: IMG.favicon192 },
+      { rel: "icon", type: "image/png", sizes: "48x48", href: IMG.favicon },
+      { rel: "icon", type: "image/png", sizes: "32x32", href: "/brand-icons/rambo-r-32.png" },
+      { rel: "shortcut icon", href: "/favicon.ico?v=2" },
+      { rel: "manifest", href: "/site.webmanifest?v=2" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/brand-icons/rambo-r-180.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -133,6 +136,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               name: SITE.name,
               url: "https://www.rambowalls.com/",
               image: IMG.og,
+              logo: "https://www.rambowalls.com/brand-icons/rambo-r-512.png",
               description:
                 "Commercial walls and ceilings contractor specializing in suspended ceilings, drywall, and steel stud framing across the Lower Mainland of British Columbia.",
               telephone: "+1-778-773-2790",

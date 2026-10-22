@@ -2,8 +2,8 @@
 export const PAGE_CARDS = {
 "/blog/commercial-ceiling-details-from-rambo-projects":{"image":"https://www.rambowalls.com/project-media/teck-cassette-baffles-share.jpg","alt":"Custom cassette baffle ceiling at Teck Resources in Bentall 5, Vancouver. Photo: Mason McKenzie / Rambo Wall & Ceiling Limited."},
   "/": {
-    "image": "https://www.rambowalls.com/og/pages/home.jpg",
-    "alt": "Walls. Ceilings. Craftsmanship. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "image": "https://www.rambowalls.com/og/rambo-ready-referred-v2.jpg",
+    "alt": "Ready. Referred. Rambo. — upgraded Rambo Wall & Ceiling banner with actual BMO Lougheed project photography by Mason McKenzie / Rambo."
   },
   "/projects": {
     "image": "https://www.rambowalls.com/og/pages/projects.jpg",

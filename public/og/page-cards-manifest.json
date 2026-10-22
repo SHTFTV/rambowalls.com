@@ -3,10 +3,10 @@
     "route": "/",
     "key": "home",
     "label": "COMMERCIAL INTERIORS",
-    "title": "Walls. Ceilings.\nCraftsmanship.",
+    "title": "Ready. Referred.\nRambo.",
     "photo": "/projects/mason-oct21/bmo-lougheed-wood-ceiling.jpg",
-    "image": "https://www.rambowalls.com/og/pages/home.jpg",
-    "alt": "Walls. Ceilings. Craftsmanship. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "image": "https://www.rambowalls.com/og/rambo-ready-referred-v2.jpg",
+    "alt": "Ready. Referred. Rambo. \u2014 new banner and BMO Lougheed project photography."
   },
   {
     "route": "/projects",
@@ -15,7 +15,7 @@
     "title": "Built on site.\nSeen in detail.",
     "photo": "/projects/mason-oct21/robson-wood-slat-ceiling.jpg",
     "image": "https://www.rambowalls.com/og/pages/projects.jpg",
-    "alt": "Built on site. Seen in detail. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Built on site. Seen in detail. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/blog",
@@ -24,187 +24,187 @@
     "title": "Practical insight.\nFrom the jobsite.",
     "photo": "/projects/mason-oct21/annacis-office-framing.jpg",
     "image": "https://www.rambowalls.com/og/pages/blog.jpg",
-    "alt": "Practical insight. From the jobsite. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Practical insight. From the jobsite. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/locations/vancouver",
     "key": "city-vancouver",
-    "label": "WALLS · CEILINGS · STEEL STUD",
+    "label": "WALLS \u00b7 CEILINGS \u00b7 STEEL STUD",
     "title": "Rambo in\nVancouver.",
     "photo": "/projects/mason-oct21/teck-cassette-baffles.jpg",
     "image": "https://www.rambowalls.com/og/pages/city-vancouver.jpg",
-    "alt": "Rambo in Vancouver. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Rambo in Vancouver. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/locations/burnaby",
     "key": "city-burnaby",
-    "label": "WALLS · CEILINGS · STEEL STUD",
+    "label": "WALLS \u00b7 CEILINGS \u00b7 STEEL STUD",
     "title": "Rambo in\nBurnaby.",
     "photo": "/projects/mason-oct21/bmo-lougheed-wood-ceiling.jpg",
     "image": "https://www.rambowalls.com/og/pages/city-burnaby.jpg",
-    "alt": "Rambo in Burnaby. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Rambo in Burnaby. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/locations/surrey",
     "key": "city-surrey",
-    "label": "WALLS · CEILINGS · STEEL STUD",
+    "label": "WALLS \u00b7 CEILINGS \u00b7 STEEL STUD",
     "title": "Rambo in\nSurrey.",
     "photo": "/projects/mason-oct21/autodesk-floating-tbar.jpg",
     "image": "https://www.rambowalls.com/og/pages/city-surrey.jpg",
-    "alt": "Rambo in Surrey. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Rambo in Surrey. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/locations/richmond",
     "key": "city-richmond",
-    "label": "WALLS · CEILINGS · STEEL STUD",
+    "label": "WALLS \u00b7 CEILINGS \u00b7 STEEL STUD",
     "title": "Rambo in\nRichmond.",
     "photo": "/projects/mason-oct21/annacis-office-framing.jpg",
     "image": "https://www.rambowalls.com/og/pages/city-richmond.jpg",
-    "alt": "Rambo in Richmond. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Rambo in Richmond. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/locations/coquitlam",
     "key": "city-coquitlam",
-    "label": "WALLS · CEILINGS · STEEL STUD",
+    "label": "WALLS \u00b7 CEILINGS \u00b7 STEEL STUD",
     "title": "Rambo in\nCoquitlam.",
     "photo": "/projects/mason-oct21/teck-cassette-baffles.jpg",
     "image": "https://www.rambowalls.com/og/pages/city-coquitlam.jpg",
-    "alt": "Rambo in Coquitlam. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Rambo in Coquitlam. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/locations/port-coquitlam",
     "key": "city-port-coquitlam",
-    "label": "WALLS · CEILINGS · STEEL STUD",
+    "label": "WALLS \u00b7 CEILINGS \u00b7 STEEL STUD",
     "title": "Rambo in\nPort Coquitlam.",
     "photo": "/projects/mason-oct21/bmo-lougheed-wood-ceiling.jpg",
     "image": "https://www.rambowalls.com/og/pages/city-port-coquitlam.jpg",
-    "alt": "Rambo in Port Coquitlam. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Rambo in Port Coquitlam. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/locations/port-moody",
     "key": "city-port-moody",
-    "label": "WALLS · CEILINGS · STEEL STUD",
+    "label": "WALLS \u00b7 CEILINGS \u00b7 STEEL STUD",
     "title": "Rambo in\nPort Moody.",
     "photo": "/projects/mason-oct21/autodesk-floating-tbar.jpg",
     "image": "https://www.rambowalls.com/og/pages/city-port-moody.jpg",
-    "alt": "Rambo in Port Moody. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Rambo in Port Moody. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/locations/new-westminster",
     "key": "city-new-westminster",
-    "label": "WALLS · CEILINGS · STEEL STUD",
+    "label": "WALLS \u00b7 CEILINGS \u00b7 STEEL STUD",
     "title": "Rambo in\nNew Westminster.",
     "photo": "/projects/mason-oct21/annacis-office-framing.jpg",
     "image": "https://www.rambowalls.com/og/pages/city-new-westminster.jpg",
-    "alt": "Rambo in New Westminster. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Rambo in New Westminster. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/locations/north-vancouver",
     "key": "city-north-vancouver",
-    "label": "WALLS · CEILINGS · STEEL STUD",
+    "label": "WALLS \u00b7 CEILINGS \u00b7 STEEL STUD",
     "title": "Rambo in\nNorth Vancouver.",
     "photo": "/projects/mason-oct21/teck-cassette-baffles.jpg",
     "image": "https://www.rambowalls.com/og/pages/city-north-vancouver.jpg",
-    "alt": "Rambo in North Vancouver. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Rambo in North Vancouver. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/locations/west-vancouver",
     "key": "city-west-vancouver",
-    "label": "WALLS · CEILINGS · STEEL STUD",
+    "label": "WALLS \u00b7 CEILINGS \u00b7 STEEL STUD",
     "title": "Rambo in\nWest Vancouver.",
     "photo": "/projects/mason-oct21/bmo-lougheed-wood-ceiling.jpg",
     "image": "https://www.rambowalls.com/og/pages/city-west-vancouver.jpg",
-    "alt": "Rambo in West Vancouver. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Rambo in West Vancouver. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/locations/delta",
     "key": "city-delta",
-    "label": "WALLS · CEILINGS · STEEL STUD",
+    "label": "WALLS \u00b7 CEILINGS \u00b7 STEEL STUD",
     "title": "Rambo in\nDelta.",
     "photo": "/projects/mason-oct21/autodesk-floating-tbar.jpg",
     "image": "https://www.rambowalls.com/og/pages/city-delta.jpg",
-    "alt": "Rambo in Delta. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Rambo in Delta. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/locations/langley",
     "key": "city-langley",
-    "label": "WALLS · CEILINGS · STEEL STUD",
+    "label": "WALLS \u00b7 CEILINGS \u00b7 STEEL STUD",
     "title": "Rambo in\nLangley.",
     "photo": "/projects/mason-oct21/annacis-office-framing.jpg",
     "image": "https://www.rambowalls.com/og/pages/city-langley.jpg",
-    "alt": "Rambo in Langley. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Rambo in Langley. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/locations/maple-ridge",
     "key": "city-maple-ridge",
-    "label": "WALLS · CEILINGS · STEEL STUD",
+    "label": "WALLS \u00b7 CEILINGS \u00b7 STEEL STUD",
     "title": "Rambo in\nMaple Ridge.",
     "photo": "/projects/mason-oct21/teck-cassette-baffles.jpg",
     "image": "https://www.rambowalls.com/og/pages/city-maple-ridge.jpg",
-    "alt": "Rambo in Maple Ridge. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Rambo in Maple Ridge. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/locations/pitt-meadows",
     "key": "city-pitt-meadows",
-    "label": "WALLS · CEILINGS · STEEL STUD",
+    "label": "WALLS \u00b7 CEILINGS \u00b7 STEEL STUD",
     "title": "Rambo in\nPitt Meadows.",
     "photo": "/projects/mason-oct21/bmo-lougheed-wood-ceiling.jpg",
     "image": "https://www.rambowalls.com/og/pages/city-pitt-meadows.jpg",
-    "alt": "Rambo in Pitt Meadows. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Rambo in Pitt Meadows. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/locations/white-rock",
     "key": "city-white-rock",
-    "label": "WALLS · CEILINGS · STEEL STUD",
+    "label": "WALLS \u00b7 CEILINGS \u00b7 STEEL STUD",
     "title": "Rambo in\nWhite Rock.",
     "photo": "/projects/mason-oct21/autodesk-floating-tbar.jpg",
     "image": "https://www.rambowalls.com/og/pages/city-white-rock.jpg",
-    "alt": "Rambo in White Rock. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Rambo in White Rock. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/locations/abbotsford",
     "key": "city-abbotsford",
-    "label": "WALLS · CEILINGS · STEEL STUD",
+    "label": "WALLS \u00b7 CEILINGS \u00b7 STEEL STUD",
     "title": "Rambo in\nAbbotsford.",
     "photo": "/projects/mason-oct21/annacis-office-framing.jpg",
     "image": "https://www.rambowalls.com/og/pages/city-abbotsford.jpg",
-    "alt": "Rambo in Abbotsford. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Rambo in Abbotsford. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/locations/tsawwassen",
     "key": "city-tsawwassen",
-    "label": "WALLS · CEILINGS · STEEL STUD",
+    "label": "WALLS \u00b7 CEILINGS \u00b7 STEEL STUD",
     "title": "Rambo in\nTsawwassen.",
     "photo": "/projects/mason-oct21/teck-cassette-baffles.jpg",
     "image": "https://www.rambowalls.com/og/pages/city-tsawwassen.jpg",
-    "alt": "Rambo in Tsawwassen. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Rambo in Tsawwassen. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/locations/ladner",
     "key": "city-ladner",
-    "label": "WALLS · CEILINGS · STEEL STUD",
+    "label": "WALLS \u00b7 CEILINGS \u00b7 STEEL STUD",
     "title": "Rambo in\nLadner.",
     "photo": "/projects/mason-oct21/bmo-lougheed-wood-ceiling.jpg",
     "image": "https://www.rambowalls.com/og/pages/city-ladner.jpg",
-    "alt": "Rambo in Ladner. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Rambo in Ladner. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/locations/ubc",
     "key": "city-ubc",
-    "label": "WALLS · CEILINGS · STEEL STUD",
+    "label": "WALLS \u00b7 CEILINGS \u00b7 STEEL STUD",
     "title": "Rambo in\nUBC.",
     "photo": "/projects/mason-oct21/autodesk-floating-tbar.jpg",
     "image": "https://www.rambowalls.com/og/pages/city-ubc.jpg",
-    "alt": "Rambo in UBC. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Rambo in UBC. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/locations/lower-mainland",
     "key": "city-lower-mainland",
-    "label": "WALLS · CEILINGS · STEEL STUD",
+    "label": "WALLS \u00b7 CEILINGS \u00b7 STEEL STUD",
     "title": "Rambo in\nLower Mainland.",
     "photo": "/projects/mason-oct21/annacis-office-framing.jpg",
     "image": "https://www.rambowalls.com/og/pages/city-lower-mainland.jpg",
-    "alt": "Rambo in Lower Mainland. — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Rambo in Lower Mainland. \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/blog/metro-vancouver-tenant-improvements-walls-ceilings-planning",
@@ -213,7 +213,7 @@
     "title": "Metro Vancouver Tenant Improvements: Make the Walls and Ceilings Part of the Plan Early",
     "photo": "/projects/rwc-archive/20211004_140229.jpg",
     "image": "https://www.rambowalls.com/og/pages/post-metro-vancouver-tenant-improvements-walls-ceilings-planning.jpg",
-    "alt": "Metro Vancouver Tenant Improvements: Make the Walls and Ceilings Part of the Plan Early — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Metro Vancouver Tenant Improvements: Make the Walls and Ceilings Part of the Plan Early \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/blog/the-post-celebration-ceiling-panels",
@@ -222,7 +222,7 @@
     "title": "The Post: A Clean Linear Ceiling with Celebration Panels",
     "photo": "/projects/matt-oct14/the-post-celebration-ceiling-panels-1.webp",
     "image": "https://www.rambowalls.com/og/pages/post-the-post-celebration-ceiling-panels.jpg",
-    "alt": "The Post: A Clean Linear Ceiling with Celebration Panels — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "The Post: A Clean Linear Ceiling with Celebration Panels \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/blog/popeyes-vancouver-restaurant-steel-stud-framing",
@@ -231,7 +231,7 @@
     "title": "Popeyes Vancouver: Framing the Space Before the Restaurant Finish",
     "photo": "/projects/matt-oct14/popeyes-vancouver-restaurant-steel-stud-framing-1.webp",
     "image": "https://www.rambowalls.com/og/pages/post-popeyes-vancouver-restaurant-steel-stud-framing.jpg",
-    "alt": "Popeyes Vancouver: Framing the Space Before the Restaurant Finish — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Popeyes Vancouver: Framing the Space Before the Restaurant Finish \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/blog/downtown-thai-restaurant-wood-baffle-ceiling",
@@ -240,7 +240,7 @@
     "title": "Wood Baffles Bring Warmth to a Downtown Thai Restaurant",
     "photo": "/projects/matt-oct14/downtown-thai-restaurant-wood-baffle-ceiling-1.webp",
     "image": "https://www.rambowalls.com/og/pages/post-downtown-thai-restaurant-wood-baffle-ceiling.jpg",
-    "alt": "Wood Baffles Bring Warmth to a Downtown Thai Restaurant — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Wood Baffles Bring Warmth to a Downtown Thai Restaurant \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/blog/langley-tenant-improvement-steel-stud-framing",
@@ -249,7 +249,7 @@
     "title": "Langley Tenant Improvement: Turn an Open Space into Useful Rooms",
     "photo": "/projects/matt-oct14/langley-tenant-improvement-steel-stud-framing-1.webp",
     "image": "https://www.rambowalls.com/og/pages/post-langley-tenant-improvement-steel-stud-framing.jpg",
-    "alt": "Langley Tenant Improvement: Turn an Open Space into Useful Rooms — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Langley Tenant Improvement: Turn an Open Space into Useful Rooms \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/blog/commercial-tbar-ceiling-installation",
@@ -258,7 +258,7 @@
     "title": "T-Bar Ceilings: A Practical Finish for Your Commercial Space",
     "photo": "/projects/matt-oct14/commercial-tbar-ceiling-installation-1.webp",
     "image": "https://www.rambowalls.com/og/pages/post-commercial-tbar-ceiling-installation.jpg",
-    "alt": "T-Bar Ceilings: A Practical Finish for Your Commercial Space — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "T-Bar Ceilings: A Practical Finish for Your Commercial Space \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/blog/curved-arch-steel-stud-framing",
@@ -267,7 +267,7 @@
     "title": "An Arch Starts in the Framing: Planning a Curved Interior Feature",
     "photo": "/projects/matt-oct14/curved-arch-steel-stud-framing-1.webp",
     "image": "https://www.rambowalls.com/og/pages/post-curved-arch-steel-stud-framing.jpg",
-    "alt": "An Arch Starts in the Framing: Planning a Curved Interior Feature — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "An Arch Starts in the Framing: Planning a Curved Interior Feature \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/blog/dp-world-suspended-ceiling-baffles",
@@ -276,7 +276,7 @@
     "title": "DP World: Repeating Ceiling Baffles with a Light, Open Look",
     "photo": "/projects/matt-oct14/dp-world-suspended-ceiling-baffles-1.webp",
     "image": "https://www.rambowalls.com/og/pages/post-dp-world-suspended-ceiling-baffles.jpg",
-    "alt": "DP World: Repeating Ceiling Baffles with a Light, Open Look — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "DP World: Repeating Ceiling Baffles with a Light, Open Look \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/blog/club-champion-steel-stud-framing-drywall-surrey",
@@ -285,7 +285,7 @@
     "title": "Club Champion at Semiahmoo: Steel Stud Framing & Drywall",
     "photo": "/projects/club-champion/drywall-wide.webp",
     "image": "https://www.rambowalls.com/og/pages/post-club-champion-steel-stud-framing-drywall-surrey.jpg",
-    "alt": "Club Champion at Semiahmoo: Steel Stud Framing & Drywall — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Club Champion at Semiahmoo: Steel Stud Framing & Drywall \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/blog/regus-mission-drywall-project",
@@ -294,7 +294,7 @@
     "title": "Regus in Mission: Drywall Work at 31999 Lougheed Highway",
     "photo": "/projects/mission-lougheed/drywall.webp",
     "image": "https://www.rambowalls.com/og/pages/post-regus-mission-drywall-project.jpg",
-    "alt": "Regus in Mission: Drywall Work at 31999 Lougheed Highway — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Regus in Mission: Drywall Work at 31999 Lougheed Highway \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/blog/steel-stud-framing-condo-renovations-vancouver",
@@ -303,7 +303,7 @@
     "title": "Steel Stud Framing for Residential Condo Renovations & Drywall in Vancouver",
     "photo": "/projects/rwc-archive/img_6800.jpg",
     "image": "https://www.rambowalls.com/og/pages/post-steel-stud-framing-condo-renovations-vancouver.jpg",
-    "alt": "Steel Stud Framing for Residential Condo Renovations & Drywall in Vancouver — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Steel Stud Framing for Residential Condo Renovations & Drywall in Vancouver \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/blog/custom-homes-drywall-boarding-taping-finishing",
@@ -312,7 +312,7 @@
     "title": "Custom Homes Drywall: Boarding, Taping & Level 5 Finishing in the Lower Mainland",
     "photo": "/projects/rwc-archive/img_6770-1.jpg",
     "image": "https://www.rambowalls.com/og/pages/post-custom-homes-drywall-boarding-taping-finishing.jpg",
-    "alt": "Custom Homes Drywall: Boarding, Taping & Level 5 Finishing in the Lower Mainland — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Custom Homes Drywall: Boarding, Taping & Level 5 Finishing in the Lower Mainland \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/blog/tbar-ceilings-residential-commercial-vancouver",
@@ -321,7 +321,7 @@
     "title": "T-Bar Ceilings for Residential & Commercial Projects in Vancouver and the Lower Mainland",
     "photo": "/projects/rwc-archive/20211005_130715.jpg",
     "image": "https://www.rambowalls.com/og/pages/post-tbar-ceilings-residential-commercial-vancouver.jpg",
-    "alt": "T-Bar Ceilings for Residential & Commercial Projects in Vancouver and the Lower Mainland — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "T-Bar Ceilings for Residential & Commercial Projects in Vancouver and the Lower Mainland \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   },
   {
     "route": "/blog/tenant-improvements-contractor-vancouver",
@@ -330,6 +330,6 @@
     "title": "Tenant Improvements Contractor in Vancouver: Walls, Ceilings & Framing Done on Schedule",
     "photo": "/projects/rwc-archive/20211004_140229.jpg",
     "image": "https://www.rambowalls.com/og/pages/post-tenant-improvements-contractor-vancouver.jpg",
-    "alt": "Tenant Improvements Contractor in Vancouver: Walls, Ceilings & Framing Done on Schedule — Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
+    "alt": "Tenant Improvements Contractor in Vancouver: Walls, Ceilings & Framing Done on Schedule \u2014 Rambo Wall & Ceiling Limited. Branded card with actual Rambo project photography."
   }
 ]

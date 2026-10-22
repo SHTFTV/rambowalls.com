@@ -8,8 +8,8 @@ export const IMG = {
   serviceCeilings: "/projects/rwc-archive/20211005_130715.jpg",
   serviceDrywall: "/projects/rwc-archive/img_6770-1.jpg",
   serviceFraming: "/projects/rwc-archive/img_6800.jpg",
-  og: "https://www.rambowalls.com/og/rambo-share-v1.jpg",
-  favicon: "/favicon.svg",
-  favicon192: "/favicon.svg",
-  favicon512: "/favicon.svg",
+  og: "https://www.rambowalls.com/og/rambo-ready-referred-v2.jpg",
+  favicon: "/brand-icons/rambo-r-48.png",
+  favicon192: "/brand-icons/rambo-r-192.png",
+  favicon512: "/brand-icons/rambo-r-512.png",
 } as const;
