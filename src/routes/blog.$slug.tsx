@@ -1,3 +1,4 @@
+import projectStories from "../lib/project-stories.json";
 import { pageCard } from "../lib/page-cards";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SITE, type BlogPost } from "../lib/site";
@@ -102,6 +103,7 @@ function BlogPostPage() {
   const data = Route.useLoaderData() as { post: BlogPost; content: BlogContent };
   const { post, content } = data;
   const related = getRelatedPosts(post.slug);
+  const projectRecord = projectStories.find(p=>p.earlierStory===`/blog/${post.slug}`);
 
   return (
     <article>
@@ -145,6 +147,8 @@ function BlogPostPage() {
             {post.imageAlt}
           </figcaption>
         </figure>
+
+        {projectRecord && <aside className="mt-7 rounded-xl border border-border bg-card p-5"><h2 className="text-2xl">See this project together</h2><p className="mt-2 text-muted-foreground">Watch the silent photo collage, open the full images and explore the project record.</p><a className="mt-3 inline-block underline font-bold" href={`/project/${projectRecord.slug}#project-video`}>Open project video, photos &amp; story →</a></aside>}
 
         <div className="prose-content mt-10 space-y-10 text-base leading-relaxed text-foreground">
           <p className="text-lg text-muted-foreground">{content.intro}</p>

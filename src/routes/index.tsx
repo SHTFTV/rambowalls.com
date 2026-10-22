@@ -1,3 +1,4 @@
+import stories from "../lib/project-stories.json";
 import { pageCard } from "../lib/page-cards";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
@@ -77,15 +78,7 @@ const sectors = [
   },
 ];
 
-const projectPreviewPhotos = [
-  RECENT_PROJECT_PHOTOS[0],
-  RECENT_PROJECT_PHOTOS[1],
-  RECENT_PROJECT_PHOTOS[3],
-  RECENT_PROJECT_PHOTOS[5],
-  RECENT_PROJECT_PHOTOS[6],
-  FEATURED_PROJECT_PHOTOS[4],
-
-];
+const projectPreviewPhotos = [0,3,9,16,18,13].map(i=>({src:stories[i].hero,alt:stories[i].photos[0].alt,title:stories[i].title,project:stories[i].location,category:stories[i].category,projectUrl:`/project/${stories[i].slug}`,credit:"Photo: Mason McKenzie / Rambo"}));
 
 function HomePage() {
   return (
