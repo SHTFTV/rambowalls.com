@@ -58,7 +58,7 @@ const cityGallery: ProjectPhoto[] = [
   photo("/projects/837-beatty/837-beatty-tectum-wall-finished.jpg"),
   photo("/projects/rwc-archive/20220803_121946.jpg"),
   photo("/projects/rwc-archive/20231108_094347.jpg"),
-  photo("/projects/rwc-archive/20211004_140229.jpg"),
+  photo("/projects/matt-oct14/popeyes-vancouver-restaurant-steel-stud-framing-1.webp"),
 ];
 
 export const Route = createFileRoute("/locations/$city")({
@@ -288,7 +288,7 @@ function CityPage() {
               className="rounded-md px-5 py-3 text-sm font-semibold text-brand-foreground"
               style={{ backgroundColor: "var(--brand)" }}
             >
-              Open the full 57-photo gallery →
+              Open the full {PROJECT_PHOTOS.length}-photo gallery →
             </Link>
           </div>
           <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
