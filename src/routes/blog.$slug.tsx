@@ -203,15 +203,15 @@ function BlogPostPage() {
               Have a project that fits this scope?
             </h2>
             <p className="mt-2 max-w-xl">
-              Call Mason directly or send drawings — we quote walls, ceilings
+              Text us or send drawings — we quote walls, ceilings
               and framing across {SITE.region}.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <a
-                href={SITE.phoneHref}
+                href="sms:+17787732790"
                 className="rounded-md bg-background px-5 py-3 font-semibold text-foreground"
               >
-                Call {SITE.phone}
+                Text {SITE.phone}
               </a>
               <a
                 href={SITE.emailHref}
