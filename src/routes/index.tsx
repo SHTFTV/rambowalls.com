@@ -1,3 +1,4 @@
+import { RamboMotionHero, RamboSceneIntro } from "../components/RamboMotionHero";
 import stories from "../lib/project-stories.json";
 import { pageCard } from "../lib/page-cards";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -81,16 +82,24 @@ const sectors = [
 const projectPreviewPhotos = [0,3,9,16,18,13].map(i=>({src:stories[i].hero,alt:stories[i].photos[0].alt,title:stories[i].title,project:stories[i].location,category:stories[i].category,projectUrl:`/project/${stories[i].slug}`,credit:"Photo: Mason McKenzie / Rambo"}));
 
 function HomePage() {
-  return (
-    <>
-      <Hero />
-      <Services />
-      <ProjectsPreview />
-      <BlogCarousel />
-      <Sectors />
-      <Contact />
-    </>
-  );
+  const [paused,setPaused]=useState(true);
+  useEffect(()=>{
+    const media=window.matchMedia('(prefers-reduced-motion: reduce)');
+    const sync=()=>setPaused(media.matches);
+    sync(); media.addEventListener('change',sync);
+    return ()=>media.removeEventListener('change',sync);
+  },[]);
+  return <div className={`rambo-home-facelift ${paused?'motion-is-paused':''}`}>
+    <RamboMotionHero paused={paused} onToggle={()=>setPaused(value=>!value)}/>
+    <RamboSceneIntro onToggle={()=>setPaused(value=>!value)} paused={paused} eyebrow="THE CRAFT" title="Good interiors start with the details." description="Ceiling systems, drywall and steel framing: explore the trades behind the finished space." href="#services" linkText="See our services" poster="/projects/mason-oct21/bmo-lougheed-wood-ceiling.jpg"/>
+    <Services/>
+    <RamboSceneIntro onToggle={()=>setPaused(value=>!value)} paused={paused} eyebrow="THE PROOF" title="Built by Rambo. Seen in the details." description="Explore completed work and installation stages, with the project photographs and scope together." href="/projects" linkText="Open the project gallery" poster="/projects/mason-oct21/teck-cassette-baffles.jpg"/>
+    <ProjectsPreview/>
+    <BlogCarousel paused={paused}/>
+    <RamboSceneIntro onToggle={()=>setPaused(value=>!value)} paused={paused} eyebrow="YOUR NEXT SPACE" title="From an empty shell to a considered interior." description="A clear scope for tenant improvements, commercial spaces and specialty ceiling work." href="#contact" linkText="Discuss your project" poster="/projects/mason-oct21/annacis-office-framing.jpg"/>
+    <Sectors/>
+    <Contact/>
+  </div>;
 }
 
 function ProjectsPreview() {
@@ -146,53 +155,6 @@ function ProjectsPreview() {
   );
 }
 
-function Hero() {
-  return (
-    <section className="relative overflow-hidden">
-      <div
-        className="absolute inset-0 -z-10 bg-cover bg-center opacity-40"
-        style={{ backgroundImage: `url(${IMG.hero})` }}
-        aria-hidden
-      />
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          background: "linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.95) 90%)",
-        }}
-        aria-hidden
-      />
-      <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32">
-        <p className="font-display tracking-[0.2em] text-sm" style={{ color: "var(--brand)" }}>
-          VANCOUVER · LOWER MAINLAND · BC
-        </p>
-        <h1 className="mt-3 max-w-3xl font-display text-5xl leading-[1.05] sm:text-7xl">
-          WALLS, CEILINGS & FRAMING <br />
-          <span style={{ color: "var(--brand)" }}>BUILT RIGHT THE FIRST TIME.</span>
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-          Commercial contractor specializing in suspended ceilings, drywall and steel stud framing.
-          Tenant improvements, condo renovations and custom homes across Vancouver and the Lower
-          Mainland.
-        </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <a
-            href={SITE.phoneHref}
-            className="rounded-md px-6 py-3 text-base font-semibold text-brand-foreground"
-            style={{ backgroundColor: "var(--brand)" }}
-          >
-            Call {SITE.phone}
-          </a>
-          <a
-            href="#contact"
-            className="rounded-md border border-border px-6 py-3 text-base font-semibold hover:bg-muted"
-          >
-            Request a quote
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Services() {
   return (
@@ -229,7 +191,7 @@ function Services() {
   );
 }
 
-function BlogCarousel() {
+function BlogCarousel({paused}:{paused:boolean}) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState(0);
 
@@ -242,16 +204,14 @@ function BlogCarousel() {
   };
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const id = setInterval(() => {
-      setIndex((i) => {
-        const next = (i + 1) % LATEST_POSTS.length;
-        scrollTo(next);
-        return next;
-      });
-    }, 6000);
-    return () => clearInterval(id);
-  }, []);
+    if (paused) return;
+    let current=0;
+    const id=setInterval(()=>{
+      current=(current+1)%LATEST_POSTS.length;
+      scrollTo(current);
+    },6000);
+    return ()=>clearInterval(id);
+  },[paused]);
 
   return (
     <section id="insights" className="border-y border-border bg-surface py-20">

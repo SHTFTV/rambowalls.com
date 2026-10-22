@@ -206,7 +206,7 @@ function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
         <Link to="/" className="flex items-center gap-2">
-          <img src="/brand/rambo-wall-ceiling-logo.jpg" alt="Rambo Wall & Ceiling Limited" width="1439" height="495" className="h-auto w-[180px] rounded-sm lg:w-[255px]" />
+          <img src="/brand-motion/rambo-wordmark.webp" alt="Rambo Wall & Ceiling Limited" width="3712" height="1152" className="h-auto w-[180px] rounded-sm lg:w-[255px]" />
         </Link>
         <nav className="hidden items-center gap-7 text-sm font-medium text-muted-foreground md:flex">
           <a href="/#services" className="hover:text-foreground">

@@ -1,5 +1,5 @@
 {
-  "buildCommand": "SERVER_PRESET=vercel npm run build",
-  "installCommand": "npm install",
+  "buildCommand": "pnpm run build",
+  "installCommand": "pnpm install --frozen-lockfile",
   "framework": null
 }
