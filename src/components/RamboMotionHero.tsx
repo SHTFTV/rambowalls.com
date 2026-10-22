@@ -29,7 +29,7 @@ export function RamboMotionHero({paused,onToggle}:{paused:boolean;onToggle:()=>v
       <div className="rambo-hero-layout">
         <div className="rambo-hero-copy">
           <p className="rambo-kicker">VANCOUVER · LOWER MAINLAND · BC</p>
-          <h1 id="rambo-hero-heading">THE DETAIL<br/>MAKES THE <span>DIFFERENCE.</span></h1>
+          <h1 id="rambo-hero-heading">READY.<br/>REFERRED.<br/><span>RAMBO.</span></h1>
           <p className="rambo-hero-description">Walls. Ceilings. Steel stud framing. Real craft, from the first layout to the final finish.</p>
           <p className="rambo-hero-scope">Commercial interiors, tenant improvements, condo renovations and custom homes.</p>
           <div className="rambo-hero-actions"><a href="#contact" className="rambo-primary-action">Talk to Mason <span aria-hidden="true">↗</span></a><a href="/projects" className="rambo-secondary-action">Explore the work <span aria-hidden="true">→</span></a></div>
