@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { SITE } from '../lib/site';
 
-export const RAMBO_HERO_VIDEO='/brand-motion/rambo-project-hero.mp4';
-const POSTER='/projects/mason-oct21/autodesk-floating-tbar.jpg';
+export const RAMBO_HERO_VIDEO='/brand-motion/rambo-ceiling-hero-desktop-v3.mp4';
+const POSTER='/projects/rwc-featured/microsoft-acoustic-clouds-detail.jpg';
 
 function useVisibleVideo(paused:boolean) {
   const ref=useRef<HTMLVideoElement>(null);
@@ -23,7 +23,7 @@ function useVisibleVideo(paused:boolean) {
 export function RamboMotionHero({paused,onToggle}:{paused:boolean;onToggle:()=>void}) {
   const videoRef=useVisibleVideo(paused);
   return <section className={`rambo-motion-hero ${paused?'motion-is-paused':''}`} aria-labelledby="rambo-hero-heading">
-    <video ref={videoRef} className="rambo-hero-film" src={RAMBO_HERO_VIDEO} poster={POSTER} muted loop playsInline preload="metadata" aria-hidden="true" tabIndex={-1}/>
+    <video ref={videoRef} className="rambo-hero-film" poster={POSTER} muted loop playsInline preload="metadata" aria-hidden="true" tabIndex={-1}><source media="(max-width: 600px)" src="/brand-motion/rambo-ceiling-hero-phone-v3.mp4" type="video/mp4"/><source src={RAMBO_HERO_VIDEO} type="video/mp4"/></video>
     <div className="rambo-hero-veil" aria-hidden="true"/>
     <div className="rambo-hero-inner">
       <div className="rambo-hero-layout">
