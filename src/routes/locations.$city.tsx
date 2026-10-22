@@ -1,3 +1,4 @@
+import { pageCard } from "../lib/page-cards";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { CITIES, getCity } from "../lib/cities";
 import { PROJECT_PHOTOS, type ProjectPhoto } from "../lib/projects";
@@ -79,12 +80,12 @@ export const Route = createFileRoute("/locations/$city")({
         { property: "og:description", content: description },
         { property: "og:url", content: pageUrl },
         { property: "og:type", content: "website" },
-        { property: "og:image", content: `${BASE_URL}${heroPhoto.src}` },
-        { property: "og:image:alt", content: heroPhoto.alt },
+        { property: "og:image", content: pageCard(`/locations/${city.slug}`).image },
+        { property: "og:image:alt", content: pageCard(`/locations/${city.slug}`).alt },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: title },
         { name: "twitter:description", content: description },
-        { name: "twitter:image", content: `${BASE_URL}${heroPhoto.src}` },
+        { name: "twitter:image", content: pageCard(`/locations/${city.slug}`).image },
       ],
       links: [{ rel: "canonical", href: pageUrl }],
     };

@@ -1,9 +1,13 @@
+import { pageCard } from "../lib/page-cards";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { BLOG_POSTS } from "../lib/site";
 
 export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
+      { property: "og:image", content: pageCard("/blog").image },
+      { name: "twitter:image", content: pageCard("/blog").image },
+      { property: "og:image:alt", content: pageCard("/blog").alt },
       { title: "Field Notes — Rambo Walls & Ceilings Blog" },
       {
         name: "description",
@@ -11,9 +15,9 @@ export const Route = createFileRoute("/blog/")({
           "Deep-dive guides from Rambo Walls & Ceilings on steel stud framing, drywall, T-bar ceilings and tenant improvements across Vancouver and the Lower Mainland.",
       },
       { property: "og:title", content: "Rambo Walls & Ceilings — Field Notes" },
-      { property: "og:url", content: "/blog" },
+      { property: "og:url", content: "https://www.rambowalls.com/blog" },
     ],
-    links: [{ rel: "canonical", href: "/blog" }],
+    links: [{ rel: "canonical", href: "https://www.rambowalls.com/blog" }],
   }),
   component: BlogIndex,
 });
@@ -34,6 +38,7 @@ function BlogIndex() {
         Lower Mainland field perspective.
       </p>
 
+      <figure className="mt-8"><img src="/projects/mason-oct21/annacis-office-framing.jpg" width="1800" height="853" alt="Steel stud interior walls at an Annacis Island office tenant improvement by Rambo Wall & Ceiling Limited" className="max-h-[360px] w-full rounded-xl object-cover" /><figcaption className="mt-2 text-xs text-muted-foreground">Annacis Island office tenant improvement · Photo supplied by Mason McKenzie / Rambo Wall & Ceiling Limited.</figcaption></figure>
       <div className="mt-12 grid gap-6 md:grid-cols-2">
         {BLOG_POSTS.map((p) => (
           <Link

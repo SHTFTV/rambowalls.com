@@ -1,3 +1,4 @@
+import { pageCard } from "../lib/page-cards";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SITE, type BlogPost } from "../lib/site";
 import type { BlogContent } from "../lib/blog-content";
@@ -22,8 +23,9 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:description", content: post.description },
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },
-        { property: "og:image", content: `https://www.rambowalls.com${post.image}` },
-        { name: "twitter:image", content: `https://www.rambowalls.com${post.image}` },
+        { property: "og:image", content: pageCard(`/blog/${params.slug}`).image },
+        { name: "twitter:image", content: pageCard(`/blog/${params.slug}`).image },
+        { property: "og:image:alt", content: pageCard(`/blog/${params.slug}`).alt },
         { name: "article:section", content: post.category },
         { name: "article:published_time", content: post.date },
       ],

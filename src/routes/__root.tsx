@@ -1,3 +1,4 @@
+import { pageCard } from "../lib/page-cards";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -86,17 +87,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: SITE.name },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_CA" },
-      { property: "og:image", content: IMG.og },
+      { property: "og:image", content: pageCard("/").image },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:type", content: "image/jpeg" },
       {
         property: "og:image:alt",
         content:
-          "Rambo Walls & Ceilings — commercial walls, ceilings and steel stud framing contractor, Vancouver and the Lower Mainland.",
+          "Rambo Wall & Ceiling Limited — branded card with real project photography.",
       },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: IMG.og },
+      { name: "twitter:image", content: pageCard("/").image },
       {
         name: "twitter:image:alt",
         content: "Rambo Walls & Ceilings — commercial contractor, Vancouver BC.",
@@ -205,16 +206,7 @@ function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
         <Link to="/" className="flex items-center gap-2">
-          <span
-            className="grid h-9 w-9 place-items-center rounded-md text-brand-foreground"
-            style={{ backgroundColor: "var(--brand)" }}
-            aria-hidden
-          >
-            <span className="font-display text-lg leading-none">R</span>
-          </span>
-          <span className="font-display text-xl tracking-wide">
-            RAMBO <span style={{ color: "var(--brand)" }}>WALLS</span>
-          </span>
+          <img src="/brand/rambo-wall-ceiling-logo.jpg" alt="Rambo Wall & Ceiling Limited" width="1439" height="495" className="h-auto w-[180px] rounded-sm lg:w-[255px]" />
         </Link>
         <nav className="hidden items-center gap-7 text-sm font-medium text-muted-foreground md:flex">
           <a href="/#services" className="hover:text-foreground">
@@ -241,7 +233,7 @@ function SiteHeader() {
         </Link>
         <a
           href={SITE.phoneHref}
-          className="hidden rounded-md px-4 py-2 text-sm font-semibold text-brand-foreground sm:inline-flex"
+          className="hidden rounded-md px-4 py-2 text-sm font-semibold text-brand-foreground lg:inline-flex"
           style={{ backgroundColor: "var(--brand)" }}
         >
           {SITE.phone}

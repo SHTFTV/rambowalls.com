@@ -1,3 +1,4 @@
+import { pageCard } from "../lib/page-cards";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { SITE, BLOG_POSTS } from "../lib/site";
@@ -9,9 +10,14 @@ import {
   RWC_ARCHIVE_PHOTOS,
 } from "../lib/projects";
 
+const LATEST_POSTS = [...BLOG_POSTS].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,4);
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
+      { property: "og:image", content: pageCard("/").image },
+      { property: "og:image:alt", content: pageCard("/").alt },
+      { name: "twitter:image", content: pageCard("/").image },
       { title: "Rambo Walls & Ceilings | Commercial Contractor — Vancouver & Lower Mainland" },
       {
         name: "description",
@@ -24,10 +30,10 @@ export const Route = createFileRoute("/")({
         content:
           "Walls, ceilings, drywall and steel stud framing for commercial, custom homes and tenant improvements in Vancouver and the Lower Mainland.",
       },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://www.rambowalls.com/" },
       { property: "og:type", content: "website" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://www.rambowalls.com/" }],
   }),
   component: HomePage,
 });
@@ -243,9 +249,10 @@ function BlogCarousel() {
   };
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const id = setInterval(() => {
       setIndex((i) => {
-        const next = (i + 1) % BLOG_POSTS.length;
+        const next = (i + 1) % LATEST_POSTS.length;
         scrollTo(next);
         return next;
       });
@@ -261,11 +268,11 @@ function BlogCarousel() {
             <p className="font-display text-sm tracking-[0.2em]" style={{ color: "var(--brand)" }}>
               FROM THE FIELD
             </p>
-            <h2 className="mt-2 text-4xl sm:text-5xl">Latest insights</h2>
+            <h2 className="mt-2 text-4xl sm:text-5xl">Latest insights</h2><p className="mt-2 text-sm text-muted-foreground">Latest article: {LATEST_POSTS[0]?.date}</p>
           </div>
           <Link
             to="/blog"
-            className="hidden text-sm font-semibold text-muted-foreground hover:text-foreground sm:inline"
+            className="text-sm font-semibold text-muted-foreground hover:text-foreground"
           >
             View all posts →
           </Link>
@@ -275,7 +282,7 @@ function BlogCarousel() {
           ref={trackRef}
           className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          {BLOG_POSTS.map((p) => (
+          {LATEST_POSTS.map((p) => (
             <Link
               key={p.slug}
               to="/blog/$slug"
@@ -297,6 +304,7 @@ function BlogCarousel() {
                   style={{ color: "var(--brand)" }}
                 >
                   {p.category} · {p.readMinutes} min read
+                  <time className="mt-2 block" dateTime={p.date}>{new Date(p.date + "T12:00:00Z").toLocaleDateString("en-CA", {year:"numeric",month:"long",day:"numeric",timeZone:"America/Vancouver"})}</time>
                 </p>
                 <h3 className="mt-2 text-xl leading-snug">{p.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{p.excerpt}</p>
@@ -306,7 +314,7 @@ function BlogCarousel() {
         </div>
 
         <div className="mt-6 flex items-center justify-center gap-2">
-          {BLOG_POSTS.map((p, i) => (
+          {LATEST_POSTS.map((p, i) => (
             <button
               key={p.slug}
               type="button"

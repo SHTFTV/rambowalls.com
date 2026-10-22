@@ -1,3 +1,4 @@
+import { pageCard } from "../lib/page-cards";
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import { PROJECT_CATEGORIES, PROJECT_PHOTOS, type ProjectCategory } from "../lib/projects";
@@ -63,10 +64,10 @@ export const Route = createFileRoute("/projects")({
       },
       { property: "og:url", content: PAGE_URL },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: OG_IMAGE },
+      { property: "og:image", content: pageCard("/projects").image },
       {
         property: "og:image:alt",
-        content: "Suspended acoustic ceiling clouds installed by Rambo Walls & Ceilings.",
+        content: pageCard("/projects").alt,
       },
       { name: "twitter:card", content: "summary_large_image" },
       {
@@ -78,7 +79,7 @@ export const Route = createFileRoute("/projects")({
         content:
           "Acoustic ceilings, T-bar systems, specialty ceilings and steel stud framing from real Rambo projects.",
       },
-      { name: "twitter:image", content: OG_IMAGE },
+      { name: "twitter:image", content: pageCard("/projects").image },
     ],
     links: [{ rel: "canonical", href: PAGE_URL }],
     scripts: [

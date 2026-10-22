@@ -459,7 +459,65 @@ export const RECENT_PROJECT_PHOTOS: ProjectPhoto[] = [
 }
 ];
 
+export const OCTOBER_21_PROJECT_PHOTOS: ProjectPhoto[] = [
+  {
+    "src": "/projects/mason-oct21/autodesk-floating-tbar.jpg",
+    "category": "Suspended & T-bar ceilings",
+    "project": "Autodesk Office",
+    "location": "Vancouver",
+    "title": "Custom painted floating T-bar ceiling with Axiom trim",
+    "alt": "Custom painted floating T-bar ceiling with Axiom trim. Photo supplied by Mason McKenzie, Rambo Wall & Ceiling Limited.",
+    "credit": "Mason McKenzie / Rambo Wall & Ceiling Limited"
+  },
+  {
+    "src": "/projects/mason-oct21/teck-cassette-baffles.jpg",
+    "category": "Linear & specialty ceilings",
+    "project": "Teck Resources, Bentall 5",
+    "location": "Vancouver",
+    "title": "Custom cassette baffle ceiling",
+    "alt": "Custom cassette baffle ceiling. Photo supplied by Mason McKenzie, Rambo Wall & Ceiling Limited.",
+    "credit": "Mason McKenzie / Rambo Wall & Ceiling Limited"
+  },
+  {
+    "src": "/projects/mason-oct21/robson-wood-slat-ceiling.jpg",
+    "category": "Linear & specialty ceilings",
+    "project": "Government of Canada office on Robson",
+    "location": "Vancouver",
+    "title": "Custom wood slat ceiling installation",
+    "alt": "Custom wood slat ceiling installation. Photo supplied by Mason McKenzie, Rambo Wall & Ceiling Limited.",
+    "credit": "Mason McKenzie / Rambo Wall & Ceiling Limited"
+  },
+  {
+    "src": "/projects/mason-oct21/bmo-lougheed-wood-ceiling.jpg",
+    "category": "Linear & specialty ceilings",
+    "project": "BMO, Lougheed Mall",
+    "location": "Burnaby",
+    "title": "Custom wood slat ceiling installation",
+    "alt": "Custom wood slat ceiling installation. Photo supplied by Mason McKenzie, Rambo Wall & Ceiling Limited.",
+    "credit": "Mason McKenzie / Rambo Wall & Ceiling Limited"
+  },
+  {
+    "src": "/projects/mason-oct21/winners-north-vancouver-tbar.jpg",
+    "category": "Suspended & T-bar ceilings",
+    "project": "Winners, Park & Tilford",
+    "location": "North Vancouver",
+    "title": "T-bar ceiling installation in progress",
+    "alt": "T-bar ceiling installation in progress. Photo supplied by Mason McKenzie, Rambo Wall & Ceiling Limited.",
+    "credit": "Mason McKenzie / Rambo Wall & Ceiling Limited"
+  },
+  {
+    "src": "/projects/mason-oct21/annacis-office-framing.jpg",
+    "category": "Steel stud framing & interiors",
+    "project": "Office tenant improvement, Annacis Island",
+    "location": "Annacis Island",
+    "title": "New steel stud interior walls",
+    "alt": "New steel stud interior walls. Photo supplied by Mason McKenzie, Rambo Wall & Ceiling Limited.",
+    "credit": "Mason McKenzie / Rambo Wall & Ceiling Limited"
+  }
+];
+
 export const PROJECT_PHOTOS: ProjectPhoto[] = [
+  ...OCTOBER_21_PROJECT_PHOTOS,
   ...RECENT_PROJECT_PHOTOS,
   ...FEATURED_PROJECT_PHOTOS,
   ...BEATTY_PROJECT_PHOTOS,
