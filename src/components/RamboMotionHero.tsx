@@ -37,8 +37,8 @@ export function RamboMotionHero({paused,onToggle}:{paused:boolean;onToggle:()=>v
         </div>
         <div className="rambo-brand-scene">
           <div className="rambo-logo-turn" role="img" aria-label="Rambo's enlarged orange R badge turns to reveal the branded safety-vest back">
-            <div className="rambo-logo-face rambo-logo-front"><img src="/brand-motion/rambo-r-badge.webp" width="2048" height="2048" alt=""/></div>
-            <div className="rambo-logo-face rambo-logo-back"><img src="/brand-motion/rambo-vest-back.webp" width="2048" height="2048" alt=""/></div>
+            <div className="rambo-logo-face rambo-logo-front"><img src="/brand-motion/rambo-r-transparent.png" width="2048" height="2048" alt=""/></div>
+            <div className="rambo-logo-face rambo-logo-back"><img src="/brand-motion/rambo-vest-transparent.png" width="2048" height="2048" alt=""/></div>
           </div>
           <p>THE NAME BEHIND THE WORK.</p>
         </div>
