@@ -153,8 +153,7 @@ function ProjectsPage() {
           <h1 className="mt-2 max-w-4xl text-5xl leading-none sm:text-7xl">Project gallery</h1>
           <figure className="mt-8 max-w-4xl"><img src="/projects/club-champion/drywall-wide.webp" alt="Drywall partitions during Rambo’s Club Champion tenant improvement scope in Surrey." width="1800" height="1013" className="w-full rounded-lg" /><figcaption className="mt-2 text-xs text-muted-foreground">Club Champion framing and drywall work in Surrey. Photo: Mason McKenzie / Rambo Wall &amp; Ceiling Limited.</figcaption></figure>
           <p className="mt-5 max-w-3xl text-base text-muted-foreground sm:text-lg">
-            {PROJECT_PHOTOS.length} photographs from Rambo Walls &amp; Ceilings projects. Select any photo to open it
-            full size, or choose a project below for its video, full photographs and story. Project names and locations are shown only where they have been confirmed.
+            Choose a project below for its video, photographs and story, or expand the full photo collection at the bottom of this page. Project names and locations are shown only where they have been confirmed.
           </p>
         </div>
       </section>
@@ -167,7 +166,11 @@ function ProjectsPage() {
         {projectGroups.map(group=><section key={group} id={group.toLowerCase().replace(/[^a-z]+/g,'-')} className="mt-14 scroll-mt-32"><div className="border-l-4 border-[var(--brand)] pl-5"><p className="text-xs uppercase tracking-widest text-muted-foreground">{stories.filter(p=>p.group===group).length} project records</p><h3 className="mt-2 text-3xl sm:text-4xl">{group}</h3></div>
         <div className="mt-8 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">{stories.filter(project=>project.group===group).map(project=><article key={project.slug} className="overflow-hidden rounded-xl border border-border bg-card"><a href={`/project/${project.slug}`}><img src={project.hero} alt={project.photos[0].alt} width="900" height="650" loading="lazy" className="h-64 w-full object-contain bg-black/5" /></a><div className="p-5"><p className="text-xs uppercase tracking-wider text-muted-foreground">{project.isArchive?'Archive collection':project.location==='Location not recorded'?'Project record':project.location}</p><h4 className="text-2xl mt-2"><a href={`/project/${project.slug}`}>{project.title}</a></h4><p className="mt-3 text-sm text-muted-foreground">{project.description}</p><a className="mt-5 inline-block font-bold underline" href={`/project/${project.slug}#project-video`}>Watch collage · photos &amp; story →</a><p className="mt-3 text-xs text-muted-foreground">Photos: Mason McKenzie / Rambo</p></div></article>)}</div></section>)}
       </section>
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16">
+      <details className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16" id="all-project-photos">
+        <summary className="cursor-pointer rounded-lg border border-border bg-card px-5 py-4 text-xl font-semibold focus-visible:outline-2 focus-visible:outline-offset-2">
+          Browse all {PROJECT_PHOTOS.length} photos
+        </summary>
+        <p className="my-5 text-sm text-muted-foreground">The full photo collection from the projects above, including additional angles and construction details.</p>
         <div className="flex flex-wrap gap-2" aria-label="Filter project photos">
           {(["All work", ...PROJECT_CATEGORIES] as Filter[]).map((item) => (
             <button
@@ -228,7 +231,7 @@ function ProjectsPage() {
             </div>
           ))}
         </div>
-      </section>
+      </details>
 
       {selectedPhoto && selectedIndex !== null && (
         <div

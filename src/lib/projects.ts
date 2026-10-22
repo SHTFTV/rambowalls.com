@@ -516,10 +516,22 @@ export const OCTOBER_21_PROJECT_PHOTOS: ProjectPhoto[] = [
   }
 ];
 
+// Same Popeyes photograph under an archive filename, plus a near-identical ceiling view.
+// Keep original assets available for existing articles and project records.
+const REPEATED_GALLERY_SOURCES = new Set([
+  "/projects/rwc-archive/20211004_140229.jpg",
+  "/projects/rwc-archive/20190805_154545.jpg",
+]);
+const seenGallerySources = new Set<string>();
+
 export const PROJECT_PHOTOS: ProjectPhoto[] = [
   ...OCTOBER_21_PROJECT_PHOTOS,
   ...RECENT_PROJECT_PHOTOS,
   ...FEATURED_PROJECT_PHOTOS,
   ...BEATTY_PROJECT_PHOTOS,
   ...RWC_ARCHIVE_PHOTOS,
-];
+].filter((photo) => {
+  if (REPEATED_GALLERY_SOURCES.has(photo.src) || seenGallerySources.has(photo.src)) return false;
+  seenGallerySources.add(photo.src);
+  return true;
+});
