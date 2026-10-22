@@ -1,3 +1,4 @@
+import { BrandProjects } from "../components/BrandProjects";
 import { RamboMotionHero, RamboSceneIntro } from "../components/RamboMotionHero";
 import stories from "../lib/project-stories.json";
 import { pageCard } from "../lib/page-cards";
@@ -99,6 +100,7 @@ function HomePage() {
     <RamboSceneIntro onToggle={()=>setPaused(value=>!value)} paused={paused} eyebrow="YOUR NEXT SPACE" title="From an empty shell to a considered interior." description="A clear scope for tenant improvements, commercial spaces and specialty ceiling work." href="#contact" linkText="Discuss your project" poster="/projects/mason-oct21/annacis-office-framing.jpg"/>
     <Sectors/>
     <Contact/>
+    <BrandProjects paused={paused} onToggle={() => setPaused(value => !value)} />
   </div>;
 }
 

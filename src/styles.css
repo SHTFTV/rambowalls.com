@@ -93,3 +93,31 @@
 @media(max-width:800px){.rambo-hero-inner{padding:28px 24px 20px}.rambo-hero-layout{gap:26px;grid-template-columns:1.4fr 1fr}.rambo-hero-copy h1{font-size:56px}.rambo-hero-description{font-size:18px}.rambo-scene-intro{margin:46px 20px 0;grid-template-columns:1fr}.rambo-scene-copy{padding:28px}.rambo-scene-copy h2{font-size:32px}}
 @media(max-width:600px){.rambo-motion-hero{min-height:0}.rambo-hero-inner{padding:24px 20px}.rambo-hero-wordmark{width:100%;margin-bottom:28px;border-radius:6px}.rambo-hero-layout{grid-template-columns:1fr;gap:22px}.rambo-brand-scene{grid-row:1;width:174px}.rambo-logo-face{border-radius:18px}.rambo-brand-scene>p{font-size:9px;margin-top:16px}.rambo-hero-copy h1{font-size:52px;line-height:1.02;margin-top:14px}.rambo-hero-description{font-size:18px}.rambo-hero-scope{font-size:14px}.rambo-hero-actions{gap:10px}.rambo-primary-action,.rambo-secondary-action{padding:13px 16px;gap:16px}.rambo-hero-bottom{margin-top:26px;gap:14px;align-items:flex-start;flex-direction:column}.rambo-hero-bottom p{font-size:9px}.rambo-hero-veil{background:linear-gradient(180deg,#080c1080,#080c10b8 35%,#080c10ed 100%)}.rambo-scene-intro{margin:36px 16px 0}.rambo-scene-copy{padding:25px}.rambo-scene-copy h2{font-size:30px}}
 @media(prefers-reduced-motion:reduce){.rambo-logo-turn{animation:none}.rambo-hero-film,.rambo-scene-media video{animation:none}.rambo-home-facelift *{scroll-behavior:auto!important}}
+
+/* Project-backed brand gallery, immediately before the footer. */
+.rambo-brands{scroll-margin-top:110px;padding:76px 0 36px;background:#eeeae3;color:#17191b;border-top:5px solid #ed741e;overflow:hidden}
+.rambo-brands-heading,.rambo-brands-controls,.rambo-brands-note{max-width:1280px;margin:0 auto;padding:0 28px}
+.rambo-brands-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:28px}
+.rambo-brands-eyebrow{font-size:12px!important;letter-spacing:.18em;font-weight:800;color:#a34508!important;margin:0 0 14px!important}
+.rambo-brands-heading h2{font-size:clamp(36px,5vw,66px);line-height:1.04;letter-spacing:-.035em;margin:0 0 20px}
+.rambo-brands-heading p{max-width:650px;font-size:17px;line-height:1.65;color:#525252}
+.rambo-brands-all{white-space:nowrap;border-bottom:2px solid #dd6410;padding-bottom:7px;font-weight:700}
+.rambo-brands-controls{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:32px;margin-bottom:14px}
+.rambo-brands-controls>span{font-size:10px;font-weight:800;letter-spacing:.12em;color:#61615c}
+.rambo-brands-controls>div{display:flex;gap:8px}
+.rambo-brands-controls button{border:1px solid #b9b6b0;border-radius:100px;min-width:40px;min-height:40px;padding:6px 13px;font-size:12px;font-weight:700;background:transparent;cursor:pointer}
+.rambo-brands-controls button:hover{background:#17191b;color:#fff}
+.rambo-brands-track{display:flex;gap:18px;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#ce722d #d9d5ce;padding:4px max(28px,calc((100vw - 1224px)/2)) 22px;overscroll-behavior-x:contain}
+.rambo-brand-card{position:relative;isolation:isolate;flex:0 0 335px;height:350px;border-radius:12px;overflow:hidden;background:#282a2a;color:white;box-shadow:0 5px 14px #0002}
+.rambo-brand-card:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#0001 0%,#0005 32%,#000e 100%);z-index:-1}
+.rambo-brand-card img{position:absolute;width:100%;height:100%;inset:0;object-fit:cover;z-index:-2;transition:transform .5s ease}
+.rambo-brand-card:hover img{transform:scale(1.045)}
+.rambo-brand-card-copy{position:absolute;left:25px;right:25px;bottom:25px}
+.rambo-brand-card h3{font-family:Arial,Helvetica,sans-serif;font-size:38px;font-weight:800;letter-spacing:-.04em;line-height:1.08;margin:0 0 11px}
+.rambo-brand-card p{font-size:13px;line-height:1.5;color:#eee;min-height:39px;margin:0 0 18px}
+.rambo-brand-card-copy>span{font-size:12px;font-weight:700;display:flex;justify-content:space-between;padding-top:13px;border-top:1px solid #ffffff50}
+.rambo-brand-card-copy>span span{color:#ff994f;font-size:18px;line-height:1}
+.rambo-brands :focus-visible{outline:3px solid #d7600c;outline-offset:3px}
+.rambo-brands-note{font-size:11px;line-height:1.7;color:#64615b;margin-top:16px}
+@media(max-width:600px){.rambo-brands{padding-top:48px}.rambo-brands-heading{align-items:flex-start;flex-direction:column;gap:18px}.rambo-brands-heading,.rambo-brands-controls,.rambo-brands-note{padding-left:20px;padding-right:20px}.rambo-brands-heading h2{font-size:42px}.rambo-brands-heading p{font-size:15px}.rambo-brands-controls{align-items:flex-start;flex-direction:column;gap:12px}.rambo-brands-track{padding-left:20px;padding-right:20px}.rambo-brand-card{flex-basis:280px;height:330px}}
+@media(prefers-reduced-motion:reduce){.rambo-brand-card img{transition:none}.rambo-brand-card:hover img{transform:none}}
