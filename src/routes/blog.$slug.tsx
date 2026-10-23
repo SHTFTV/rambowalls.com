@@ -27,6 +27,14 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:image", content: pageCard(`/blog/${params.slug}`).image },
         { name: "twitter:image", content: pageCard(`/blog/${params.slug}`).image },
         { property: "og:image:alt", content: pageCard(`/blog/${params.slug}`).alt },
+        { property: "og:image:type", content: "image/jpeg" },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
+        { property: "og:site_name", content: "Rambo Walls & Ceilings" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: post.title },
+        { name: "twitter:description", content: post.description },
+        { name: "twitter:image:alt", content: pageCard(`/blog/${params.slug}`).alt },
         { name: "article:section", content: post.category },
         { name: "article:published_time", content: post.date },
       ],
@@ -107,7 +115,7 @@ function BlogPostPage() {
 
   return (
     <article>
-      <header className="relative overflow-hidden">
+      {post.slug==="tbar-ceilings-acoustic-spray-insulation-coordination"?<header className="acoustic-story-hero"><div><p className="acoustic-story-label">RAMBO / ACOUSTIC CEILING COORDINATION</p><h1>{post.title}</h1><p>{post.description}</p><p className="acoustic-story-date">Rambo Walls &amp; Ceilings · <time dateTime={post.date}>October 23, 2026</time></p></div><figure><img src={post.image} alt={post.imageAlt}/><figcaption>{post.imageAlt}</figcaption></figure></header>:<header className="relative overflow-hidden">
         <div
           className="absolute inset-0 -z-10 bg-cover bg-center opacity-40"
           style={{ backgroundImage: `url(${post.image})` }}
@@ -134,10 +142,10 @@ function BlogPostPage() {
             {post.description}
           </p>
         </div>
-      </header>
+      </header>}
 
       <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
-        <figure className="overflow-hidden rounded-lg border border-border">
+        {post.slug!=="tbar-ceilings-acoustic-spray-insulation-coordination"&&<figure className="overflow-hidden rounded-lg border border-border">
           <img
             src={post.image}
             title={post.imageAlt} alt={post.imageAlt}
@@ -146,12 +154,12 @@ function BlogPostPage() {
           <figcaption className="border-t border-border bg-card px-4 py-2 text-xs text-muted-foreground">
             {post.imageAlt}
           </figcaption>
-        </figure>
+        </figure>}
 
         {projectRecord && <aside className="mt-7 rounded-xl border border-border bg-card p-5"><h2 className="text-2xl">See this project together</h2><p className="mt-2 text-muted-foreground">Watch the silent photo collage, open the full images and explore the project record.</p><a className="mt-3 inline-block underline font-bold" href={`/project/${projectRecord.slug}#project-video`}>Open project video, photos &amp; story →</a></aside>}
 
         <div className="prose-content mt-10 space-y-10 text-base leading-relaxed text-foreground">
-          <p className="text-lg text-muted-foreground">{content.intro}</p>
+          <p className="text-lg text-muted-foreground">{content.intro}</p>{post.slug==="tbar-ceilings-acoustic-spray-insulation-coordination"&&<nav aria-label="Companion acoustic guides" className="grid gap-4 rounded-lg border border-border bg-card p-5"><a className="underline font-semibold" href="https://wesprayit.ca/guides/spray-insulation-tbar-ceilings-acoustic-performance">WeSprayIt / PSI: acoustic spray materials and performance ↗</a><a className="underline font-semibold" href="https://www.acustiq.ca/insights/spray-insulation-suspended-ceiling-acoustic-design">ACUSTIQ: specify the ceiling and the whole sound path ↗</a></nav>}
 
           {post.slug === "club-champion-steel-stud-framing-drywall-surrey" && <section aria-label="Club Champion project photographs" className="grid gap-6 sm:grid-cols-2">{[{src:"steel-stud-framing",alt:"Steel stud wall framing with backing and services before boarding."},{src:"drywall-interior",alt:"Drywall partitions and openings during the retail fit-out."}].map(photo => <figure key={photo.src}><img src={`/projects/club-champion/${photo.src}.webp`} alt={photo.alt} loading="lazy" className="w-full rounded-lg" /><figcaption className="mt-2 text-xs text-muted-foreground">{photo.alt} Photo: Mason McKenzie / Rambo Wall &amp; Ceiling Limited.</figcaption></figure>)}</section>}
           {post.slug === "regus-mission-drywall-project" && <section className="space-y-6">{[{src:"framing",alt:"Steel stud partitions before drywall at 31999 Lougheed Highway, Mission."},{src:"taping",alt:"Taping-stage walls at the same Mission address."}].map(photo => <figure key={photo.src}><img src={`/projects/mission-lougheed/${photo.src}.webp`} alt={photo.alt} loading="lazy" className="w-full rounded-lg" /><figcaption className="mt-2 text-xs text-muted-foreground">{photo.alt} Photo: Mason McKenzie / Rambo Wall &amp; Ceiling Limited.</figcaption></figure>)}</section>}

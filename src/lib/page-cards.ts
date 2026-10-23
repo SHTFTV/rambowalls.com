@@ -1,5 +1,6 @@
 // Generated route-specific social cards. Source: scripts/build-page-cards.mjs.
 export const PAGE_CARDS = {
+"/blog/tbar-ceilings-acoustic-spray-insulation-coordination":{"image": "https://www.rambowalls.com/og/pages/post-acoustic-spray-tbar-coordination.jpg", "alt": "Rambo: coordinate acoustic spray and T-bar ceilings. Actual Autodesk project photography by Mason McKenzie / Rambo."},
 "/blog/commercial-ceiling-details-from-rambo-projects":{"image":"https://www.rambowalls.com/project-media/teck-cassette-baffles-share.jpg","alt":"Custom cassette baffle ceiling at Teck Resources in Bentall 5, Vancouver. Photo: Mason McKenzie / Rambo Wall & Ceiling Limited."},
   "/": {
     "image": "https://www.rambowalls.com/og/rambo-ready-referred-v2.jpg",
