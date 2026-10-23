@@ -43,7 +43,7 @@ export const Route = createFileRoute("/")({
 
 const services = [
   {
-    title: "Suspended & T-Bar Ceilings",
+    title: "Acoustic & T-Bar Ceilings",
     img: IMG.serviceCeilings,
     alt: "Completed suspended T-bar ceiling with white acoustic tiles and integrated lighting in a commercial room.",
     body: "Acoustic grids, mineral fiber tile, metal pan, concealed spline and wood-look ceilings for offices, retail, restaurants and residential basements.",
@@ -185,6 +185,7 @@ function Services() {
             <div className="p-6">
               <h3 className="text-2xl">{s.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{s.body}</p>
+              {s.title === "Acoustic & T-Bar Ceilings" && <a href="/acoustic-ceiling-contractors" className="mt-4 inline-block font-semibold text-brand underline">Acoustic ceiling contractors →</a>}
             </div>
           </article>
         ))}

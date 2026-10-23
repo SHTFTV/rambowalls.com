@@ -268,7 +268,7 @@ function SiteFooter() {
                 Project Gallery
               </Link>
             </li>
-            <li>Suspended &amp; T-Bar Ceilings</li>
+            <li><a href="/acoustic-ceiling-contractors" className="hover:text-foreground">Acoustic ceiling contractors</a></li>
             <li>Drywall Boarding &amp; Taping</li>
             <li>Steel Stud Framing</li>
             <li>Tenant Improvements</li>

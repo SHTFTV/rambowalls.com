@@ -18,6 +18,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           images?: typeof PROJECT_PHOTOS;
         }[] = [
           { path: "/", priority: "1.0", changefreq: "weekly" },
+          { path: "/acoustic-ceiling-contractors", priority: "0.9", changefreq: "monthly" },
           { path: "/projects", priority: "0.9", changefreq: "monthly", images: PROJECT_PHOTOS },
           { path: "/blog", priority: "0.8", changefreq: "weekly" },
           ...stories.map(p=>({path:`/project/${p.slug}`,priority:"0.8",changefreq:"monthly",images:p.photos.map(photo=>({...photo,category:p.category as typeof PROJECT_PHOTOS[number]["category"]}))})),

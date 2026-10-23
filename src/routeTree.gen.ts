@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AcousticCeilingContractorsRouteImport } from './routes/acoustic-ceiling-contractors'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
@@ -22,6 +23,12 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AcousticCeilingContractorsRoute =
+  AcousticCeilingContractorsRouteImport.update({
+    id: '/acoustic-ceiling-contractors',
+    path: '/acoustic-ceiling-contractors',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ProjectsRoute = ProjectsRouteImport.update({
   id: '/projects',
   path: '/projects',
@@ -55,6 +62,7 @@ const ProjectSlugRoute = ProjectSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/acoustic-ceiling-contractors': typeof AcousticCeilingContractorsRoute
   '/projects': typeof ProjectsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -64,6 +72,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/acoustic-ceiling-contractors': typeof AcousticCeilingContractorsRoute
   '/projects': typeof ProjectsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -74,6 +83,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/acoustic-ceiling-contractors': typeof AcousticCeilingContractorsRoute
   '/projects': typeof ProjectsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -85,6 +95,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/acoustic-ceiling-contractors'
     | '/projects'
     | '/sitemap.xml'
     | '/blog/$slug'
@@ -94,6 +105,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/acoustic-ceiling-contractors'
     | '/projects'
     | '/sitemap.xml'
     | '/blog/$slug'
@@ -103,6 +115,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/acoustic-ceiling-contractors'
     | '/projects'
     | '/sitemap.xml'
     | '/blog/$slug'
@@ -113,6 +126,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AcousticCeilingContractorsRoute: typeof AcousticCeilingContractorsRoute
   ProjectsRoute: typeof ProjectsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   BlogSlugRoute: typeof BlogSlugRoute
@@ -128,6 +142,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/acoustic-ceiling-contractors': {
+      id: '/acoustic-ceiling-contractors'
+      path: '/acoustic-ceiling-contractors'
+      fullPath: '/acoustic-ceiling-contractors'
+      preLoaderRoute: typeof AcousticCeilingContractorsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects': {
@@ -177,6 +198,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AcousticCeilingContractorsRoute: AcousticCeilingContractorsRoute,
   ProjectsRoute: ProjectsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   BlogSlugRoute: BlogSlugRoute,
