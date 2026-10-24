@@ -24,7 +24,7 @@ function MissionPage() {
         <p className="rambo-mission-label">OUR MISSION</p>
         <h1 id="rambo-mission-title">Two triggers.<br/><span>One mission.</span></h1>
         <p className="rambo-mission-lead">Keep it clean. Keep it on time.</p>
-        <p>Rambo is the new face of the well-established McKenzie Brothers. Our crews bring experience across ceilings, walls and general construction.</p>
+        <p>Rambo is the new face of the well-established McKenzie Brothers, with 15 years of servicing and building out projects across the Lower Mainland. Our crews bring that experience to ceilings, walls and general construction.</p>
         <p>Our mission is to bring quality workmanship and hands-on management to every project: keep the work to code, keep the job on budget and deliver a finish we can stand behind. Every time.</p>
         <div className="rambo-mission-priorities"><p><strong>01 / KEEP IT CLEAN</strong><span>Organised work areas. Respect for the site. Care in the details.</span></p><p><strong>02 / KEEP IT ON TIME</strong><span>Plan the sequence. Coordinate the crews. Keep the job moving.</span></p></div>
         <a href="/#contact" className="rambo-mission-link">Talk to Mason about your project ↗</a>
