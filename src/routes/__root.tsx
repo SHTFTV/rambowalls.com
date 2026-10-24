@@ -203,9 +203,12 @@ function RootComponent() {
         <Outlet />
       </main>
       <aside className="mt-24 bg-[#ff7900] text-[#10151c]" aria-label="Rambo's two triggers">
-        <a href="/mission" data-testid="rambo-two-triggers-banner" className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-4 py-3 transition-colors hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-black sm:px-6">
-          <strong className="font-display text-2xl tracking-wide">TWO TRIGGERS. ONE MISSION.</strong>
-          <span className="text-sm font-semibold">Find out what triggers Rambo crews—and what makes us different <span aria-hidden="true">→</span></span>
+        <a href="/mission" data-testid="rambo-two-triggers-banner" className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 transition-colors hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-black sm:gap-6 sm:px-6">
+          <img src="/brand/rambo-two-triggers-mission.webp" alt="Rambo safety-vest mascot holding two red tools" width="1672" height="941" loading="lazy" className="h-auto w-32 shrink-0 rounded sm:w-44" />
+          <span className="flex min-w-0 flex-1 flex-col gap-1 md:flex-row md:items-center md:justify-between md:gap-6">
+            <strong className="font-display text-xl leading-tight tracking-wide sm:text-2xl">TWO TRIGGERS. ONE MISSION.</strong>
+            <span className="text-xs font-semibold sm:text-sm">Find out what triggers Rambo crews—and what makes us different <span aria-hidden="true">→</span></span>
+          </span>
         </a>
       </aside>
       <SiteFooter />
