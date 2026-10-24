@@ -202,7 +202,8 @@ function RootComponent() {
       <main>
         <Outlet />
       </main>
-      <aside className="mt-24 bg-[#ff7900] text-[#10151c]" aria-label="Rambo's two triggers">
+      <aside className="relative isolate mt-24 overflow-hidden bg-[#ff7900] text-[#10151c]" aria-label="Rambo's two triggers">
+        <span aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-2 -z-10 flex select-none items-center font-display text-[100px] leading-none tracking-wider text-black/[0.09] sm:right-8 sm:text-[140px]">RAMBO</span>
         <a href="/mission" data-testid="rambo-two-triggers-banner" className="mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 transition-colors hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-black sm:gap-6 sm:px-6">
           <img src="/brand/rambo-two-triggers-mission.webp" alt="Rambo safety-vest mascot holding two red tools" width="1672" height="941" loading="lazy" className="h-auto w-32 shrink-0 rounded sm:w-44" />
           <span className="flex min-w-0 flex-1 flex-col gap-1 md:flex-row md:items-center md:justify-between md:gap-6">
