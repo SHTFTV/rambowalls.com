@@ -202,6 +202,12 @@ function RootComponent() {
       <main>
         <Outlet />
       </main>
+      <aside className="mt-24 bg-[#ff7900] text-[#10151c]" aria-label="Rambo's two triggers">
+        <a href="/mission" data-testid="rambo-two-triggers-banner" className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-4 py-3 transition-colors hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-black sm:px-6">
+          <strong className="font-display text-2xl tracking-wide">TWO TRIGGERS. ONE MISSION.</strong>
+          <span className="text-sm font-semibold">Find out what triggers Rambo crews—and what makes us different <span aria-hidden="true">→</span></span>
+        </a>
+      </aside>
       <SiteFooter />
       <RamboContactCard />
     </QueryClientProvider>
@@ -252,7 +258,7 @@ function SiteHeader() {
 
 function SiteFooter() {
   return (
-    <footer className="mt-24 border-t border-border bg-surface">
+    <footer className="border-t border-border bg-surface">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4">
         <div>
           <div className="font-display text-2xl">
@@ -262,7 +268,6 @@ function SiteFooter() {
             Commercial walls, ceilings and steel stud framing across Vancouver and the Lower
             Mainland.
           </p>
-          <p className="mt-4 text-sm"><a href="/mission" className="block max-w-xs leading-relaxed hover:text-foreground underline underline-offset-4">Find out what two things trigger Rambo crews—and what makes us different →</a></p>
         </div>
         <div>
           <h4 className="text-sm font-semibold text-foreground">Services</h4>
