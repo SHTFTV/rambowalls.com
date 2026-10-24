@@ -259,6 +259,7 @@ function SiteFooter() {
             Commercial walls, ceilings and steel stud framing across Vancouver and the Lower
             Mainland.
           </p>
+          <p className="mt-4 text-sm"><a href="/mission" className="hover:text-foreground underline underline-offset-4">Our mission</a></p>
         </div>
         <div>
           <h4 className="text-sm font-semibold text-foreground">Services</h4>

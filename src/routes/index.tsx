@@ -92,18 +92,6 @@ function HomePage() {
   },[]);
   return <div className={`rambo-home-facelift ${paused?'motion-is-paused':''}`}>
     <RamboMotionHero paused={paused} onToggle={()=>setPaused(value=>!value)}/>
-    <section id="mission" className="rambo-mission" aria-labelledby="rambo-mission-title">
-      <div className="rambo-mission-copy">
-        <p className="rambo-mission-label">OUR MISSION</p>
-        <h2 id="rambo-mission-title">Two triggers.<br/><span>One mission.</span></h2>
-        <p className="rambo-mission-lead">Keep it clean. Keep it on time.</p>
-        <p>Rambo is the new face of the well-established McKenzie Brothers. Our crews bring experience across ceilings, walls and general construction.</p>
-        <p>Our mission is to bring quality workmanship and hands-on management to every project: keep the work to code, keep the job on budget and deliver a finish we can stand behind. Every time.</p>
-        <div className="rambo-mission-priorities"><p><strong>01 / KEEP IT CLEAN</strong><span>Organised work areas. Respect for the site. Care in the details.</span></p><p><strong>02 / KEEP IT ON TIME</strong><span>Plan the sequence. Coordinate the crews. Keep the job moving.</span></p></div>
-        <a href="#contact" className="rambo-mission-link">Talk to Mason about your project ↗</a>
-      </div>
-      <figure><img src="/brand/rambo-two-triggers-mission.webp" width="1672" height="941" loading="lazy" alt="Rambo safety-vest R logo with two gloved arms holding a red impact driver and a red drywall screw gun. Two triggers. One mission."/><figcaption>AI-assisted Rambo brand illustration based on the existing safety-vest logo. Two tools. Two priorities: clean work and an on-time job.</figcaption></figure>
-    </section>
     <RamboSceneIntro onToggle={()=>setPaused(value=>!value)} paused={paused} eyebrow="THE CRAFT" title="Good interiors start with the details." description="Ceiling systems, drywall and steel framing: explore the trades behind the finished space." href="#services" linkText="See our services" poster="/projects/mason-oct21/bmo-lougheed-wood-ceiling.jpg"/>
     <Services/>
     <RamboSceneIntro onToggle={()=>setPaused(value=>!value)} paused={paused} eyebrow="THE PROOF" title="Built by Rambo. Seen in the details." description="Explore completed work and installation stages, with the project photographs and scope together." href="/projects" linkText="Open the project gallery" poster="/projects/mason-oct21/teck-cassette-baffles.jpg"/>
