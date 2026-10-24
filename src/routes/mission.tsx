@@ -29,7 +29,7 @@ function MissionPage() {
         <div className="rambo-mission-priorities"><p><strong>01 / KEEP IT CLEAN</strong><span>Organised work areas. Respect for the site. Care in the details.</span></p><p><strong>02 / KEEP IT ON TIME</strong><span>Plan the sequence. Coordinate the crews. Keep the job moving.</span></p></div>
         <a href="/#contact" className="rambo-mission-link">Talk to Mason about your project ↗</a>
       </div>
-      <figure><img src="/brand/rambo-two-triggers-mission.webp" width="1672" height="941" fetchPriority="high" alt="Rambo safety-vest R logo with two gloved arms holding a red impact driver and a red drywall screw gun. Two triggers. One mission."/><figcaption>AI-assisted Rambo brand illustration based on the existing safety-vest logo. Two tools. Two priorities: clean work and an on-time job.</figcaption></figure>
     </section>
+      <figure className="rambo-mission-mascot"><img src="/brand/rambo-two-triggers-mission.webp" width="1672" height="941" fetchPriority="high" alt="Rambo safety-vest R logo with two gloved arms holding a red impact driver and a red drywall screw gun. Two triggers. One mission."/><figcaption>AI-assisted Rambo brand illustration based on the existing safety-vest logo. Two tools. Two priorities: clean work and an on-time job.</figcaption></figure>
   </div>;
 }
