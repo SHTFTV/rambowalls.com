@@ -3,8 +3,8 @@ export const PAGE_CARDS = {
 "/blog/tbar-ceilings-acoustic-spray-insulation-coordination":{"image": "https://www.rambowalls.com/og/pages/post-acoustic-spray-tbar-coordination.jpg", "alt": "Rambo: coordinate acoustic spray and T-bar ceilings. Actual Autodesk project photography by Mason McKenzie / Rambo."},
 "/blog/commercial-ceiling-details-from-rambo-projects":{"image":"https://www.rambowalls.com/project-media/teck-cassette-baffles-share.jpg","alt":"Custom cassette baffle ceiling at Teck Resources in Bentall 5, Vancouver. Photo: Mason McKenzie / Rambo Wall & Ceiling Limited."},
   "/": {
-    "image": "https://www.rambowalls.com/og/rambo-ready-referred-v2.jpg",
-    "alt": "Ready. Referred. Rambo. — upgraded Rambo Wall & Ceiling banner with actual BMO Lougheed project photography by Mason McKenzie / Rambo."
+    "image": "https://www.rambowalls.com/brand/rambo-two-triggers-share.jpg",
+    "alt": "Two triggers. One mission. Keep it clean. Keep it on time. AI-assisted Rambo safety-vest brand illustration with a red impact driver and drywall screw gun."
   },
   "/projects": {
     "image": "https://www.rambowalls.com/og/pages/projects.jpg",
