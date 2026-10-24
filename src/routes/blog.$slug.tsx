@@ -166,7 +166,6 @@ function BlogPostPage() {
           {post.slug === "regus-mission-drywall-project" && <figure><img src="/projects/mission-lougheed/window-detail.webp" alt="Drywall window return at Regus in Mission." loading="lazy" className="w-full rounded-lg" /><figcaption className="mt-2 text-xs text-muted-foreground">Drywall window return during the Regus work in Mission. Photo: Mason McKenzie / Rambo Wall &amp; Ceiling Limited.</figcaption></figure>}
           {post.slug === "club-champion-steel-stud-framing-drywall-surrey" && <p>General contractor: <a href="https://members.edmca.com/member-directory/Details/white-knight-construction-ltd-1967881" className="underline">White Knight Construction Ltd.</a> · <a href="/projects" className="underline">View Rambo’s project gallery</a></p>}
           {content.gallery?.length ? <section aria-label="Project photographs" className="grid gap-6 sm:grid-cols-2">{content.gallery.map(photo => <figure key={photo.src}><img src={photo.src} alt={photo.alt} loading="lazy" className="w-full h-auto rounded-lg" /><figcaption className="mt-2 text-xs text-muted-foreground">{photo.caption}</figcaption></figure>)}</section> : null}
-          {content.gallery && <RamboProjectCard />}
           {content.sections.map((s) => (
             <section key={s.heading}>
               <h2 className="text-3xl sm:text-4xl">{s.heading}</h2>
@@ -271,4 +270,4 @@ function BlogPostPage() {
   );
 }
 
-function RamboProjectCard(){return <details className="fixed z-50 bottom-4 right-4 max-w-[calc(100vw-2rem)] rounded-xl bg-slate-950 text-white shadow-2xl p-4"><summary className="font-bold cursor-pointer">Contact Rambo</summary><div className="mt-3 grid gap-3 text-sm"><strong>Rambo Wall &amp; Ceiling Limited</strong><a href="tel:+17787732790" className="text-amber-300">Call 778-773-2790</a><a href="sms:+17789547555" className="text-amber-300">Text Mason 778-954-7555</a><a href="mailto:rambowallceiling@gmail.com" className="text-amber-300">Email Rambo</a><a href="https://www.google.com/search?q=Rambo+Wall+and+Ceiling+Limited" target="_blank" rel="noopener noreferrer" className="text-amber-300">Find Rambo on Google</a></div></details>;}
+

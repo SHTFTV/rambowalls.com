@@ -1,3 +1,4 @@
+import RamboContactCard from "../components/RamboContactCard";
 import { pageCard } from "../lib/page-cards";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
@@ -140,6 +141,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               description:
                 "Commercial walls and ceilings contractor specializing in suspended ceilings, drywall, and steel stud framing across the Lower Mainland of British Columbia.",
               telephone: "+1-778-773-2790",
+              sameAs: ["https://www.google.com/maps?cid=12643128656142868159"],
               email: SITE.email,
               priceRange: "$$",
               address: {
@@ -201,6 +203,7 @@ function RootComponent() {
         <Outlet />
       </main>
       <SiteFooter />
+      <RamboContactCard />
     </QueryClientProvider>
   );
 }
