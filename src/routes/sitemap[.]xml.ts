@@ -1,4 +1,4 @@
-import stories from "../lib/project-stories.json";
+import stories from "../lib/updated-project-stories";
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { BLOG_POSTS } from "../lib/site";

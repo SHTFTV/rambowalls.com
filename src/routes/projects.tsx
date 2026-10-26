@@ -1,4 +1,4 @@
-import stories from "../lib/project-stories.json";
+import stories from "../lib/updated-project-stories";
 import { pageCard } from "../lib/page-cards";
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
