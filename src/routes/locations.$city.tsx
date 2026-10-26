@@ -229,6 +229,7 @@ function CityPage() {
           </p>
         </header>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <a href="/commercial-drywall-contractor-lower-mainland" className="mb-5 inline-block font-semibold text-brand underline">Commercial drywall contractor · Lower Mainland →</a>
           {services.map((service) => (
             <article
               key={service.title}

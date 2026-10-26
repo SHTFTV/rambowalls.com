@@ -281,6 +281,7 @@ function SiteFooter() {
                 Project Gallery
               </Link>
             </li>
+            <li><a href="/commercial-drywall-contractor-lower-mainland" className="hover:text-foreground">Commercial drywall · Lower Mainland</a></li>
             <li><a href="/acoustic-ceiling-contractors" className="hover:text-foreground">Acoustic ceiling contractors</a></li>
             <li>Drywall Boarding &amp; Taping</li>
             <li>Steel Stud Framing</li>

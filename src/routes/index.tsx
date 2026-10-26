@@ -185,6 +185,7 @@ function Services() {
             <div className="p-6">
               <h3 className="text-2xl">{s.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{s.body}</p>
+              {s.title.toLowerCase().includes("drywall") && <a href="/commercial-drywall-contractor-lower-mainland" className="mt-4 inline-block font-semibold text-brand underline">Commercial drywall · Lower Mainland →</a>}
               {s.title === "Acoustic & T-Bar Ceilings" && <a href="/acoustic-ceiling-contractors" className="mt-4 inline-block font-semibold text-brand underline">Acoustic ceiling contractors →</a>}
             </div>
           </article>

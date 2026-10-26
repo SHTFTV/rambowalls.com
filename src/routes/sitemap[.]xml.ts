@@ -19,6 +19,7 @@ export const Route = createFileRoute("/sitemap.xml")({
         }[] = [
           { path: "/", priority: "1.0", changefreq: "weekly" },
           { path: "/mission", priority: "0.6", changefreq: "monthly" },
+          { path: "/commercial-drywall-contractor-lower-mainland", priority: "0.9", changefreq: "monthly" },
           { path: "/acoustic-ceiling-contractors", priority: "0.9", changefreq: "monthly" },
           { path: "/projects", priority: "0.9", changefreq: "monthly", images: PROJECT_PHOTOS },
           { path: "/blog", priority: "0.8", changefreq: "weekly" },

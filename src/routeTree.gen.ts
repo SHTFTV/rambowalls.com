@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AcousticCeilingContractorsRouteImport } from './routes/acoustic-ceiling-contractors'
+import { Route as CommercialDrywallContractorLowerMainlandRouteImport } from './routes/commercial-drywall-contractor-lower-mainland'
 import { Route as MissionRouteImport } from './routes/mission'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -28,6 +29,12 @@ const AcousticCeilingContractorsRoute =
   AcousticCeilingContractorsRouteImport.update({
     id: '/acoustic-ceiling-contractors',
     path: '/acoustic-ceiling-contractors',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CommercialDrywallContractorLowerMainlandRoute =
+  CommercialDrywallContractorLowerMainlandRouteImport.update({
+    id: '/commercial-drywall-contractor-lower-mainland',
+    path: '/commercial-drywall-contractor-lower-mainland',
     getParentRoute: () => rootRouteImport,
   } as any)
 const MissionRoute = MissionRouteImport.update({
@@ -69,6 +76,7 @@ const ProjectSlugRoute = ProjectSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/acoustic-ceiling-contractors': typeof AcousticCeilingContractorsRoute
+  '/commercial-drywall-contractor-lower-mainland': typeof CommercialDrywallContractorLowerMainlandRoute
   '/mission': typeof MissionRoute
   '/projects': typeof ProjectsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -80,6 +88,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/acoustic-ceiling-contractors': typeof AcousticCeilingContractorsRoute
+  '/commercial-drywall-contractor-lower-mainland': typeof CommercialDrywallContractorLowerMainlandRoute
   '/mission': typeof MissionRoute
   '/projects': typeof ProjectsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -92,6 +101,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/acoustic-ceiling-contractors': typeof AcousticCeilingContractorsRoute
+  '/commercial-drywall-contractor-lower-mainland': typeof CommercialDrywallContractorLowerMainlandRoute
   '/mission': typeof MissionRoute
   '/projects': typeof ProjectsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -105,6 +115,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/acoustic-ceiling-contractors'
+    | '/commercial-drywall-contractor-lower-mainland'
     | '/mission'
     | '/projects'
     | '/sitemap.xml'
@@ -116,6 +127,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/acoustic-ceiling-contractors'
+    | '/commercial-drywall-contractor-lower-mainland'
     | '/mission'
     | '/projects'
     | '/sitemap.xml'
@@ -127,6 +139,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/acoustic-ceiling-contractors'
+    | '/commercial-drywall-contractor-lower-mainland'
     | '/mission'
     | '/projects'
     | '/sitemap.xml'
@@ -139,6 +152,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AcousticCeilingContractorsRoute: typeof AcousticCeilingContractorsRoute
+  CommercialDrywallContractorLowerMainlandRoute: typeof CommercialDrywallContractorLowerMainlandRoute
   MissionRoute: typeof MissionRoute
   ProjectsRoute: typeof ProjectsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -162,6 +176,13 @@ declare module '@tanstack/react-router' {
       path: '/acoustic-ceiling-contractors'
       fullPath: '/acoustic-ceiling-contractors'
       preLoaderRoute: typeof AcousticCeilingContractorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/commercial-drywall-contractor-lower-mainland': {
+      id: '/commercial-drywall-contractor-lower-mainland'
+      path: '/commercial-drywall-contractor-lower-mainland'
+      fullPath: '/commercial-drywall-contractor-lower-mainland'
+      preLoaderRoute: typeof CommercialDrywallContractorLowerMainlandRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mission': {
@@ -219,6 +240,8 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AcousticCeilingContractorsRoute: AcousticCeilingContractorsRoute,
+  CommercialDrywallContractorLowerMainlandRoute:
+    CommercialDrywallContractorLowerMainlandRoute,
   MissionRoute: MissionRoute,
   ProjectsRoute: ProjectsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
