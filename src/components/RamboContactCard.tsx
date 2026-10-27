@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ExternalLink, Mail, MessageSquare, Pause, Phone, Play, Star, X } from 'lucide-react';
+import { ExternalLink, Mail, Pause, Phone, Play, Star, X } from 'lucide-react';
 
 export const RAMBO_GOOGLE_URL = 'https://www.google.com/maps?cid=12643128656142868159';
 
@@ -27,8 +27,7 @@ export default function RamboContactCard() {
       <div><p className="rambo-contact-brand">Rambo Wall &amp; Ceiling</p><p className="rambo-contact-title">Let’s build your project.</p></div>
     </div>
     <div className="rambo-contact-actions">
-      <a className="rambo-contact-call" href="tel:+17787732790"><Phone size={18} aria-hidden="true" /><span><small>Call now</small><strong>778-773-2790</strong></span></a>
-      <a href="sms:+17789547555"><MessageSquare size={18} aria-hidden="true" /><span><small>Text Rambo</small><strong>778-954-7555</strong></span></a>
+      <a className="rambo-contact-call" href="tel:+17787732790"><Phone size={18} aria-hidden="true" /><span><small>Call Mason</small><strong>778-773-2790</strong></span></a>
       <a href="mailto:rambowallceiling@gmail.com"><Mail size={18} aria-hidden="true" /><span><small>Email</small><strong className="rambo-contact-email">rambowallceiling@gmail.com</strong></span></a>
       <a href={RAMBO_GOOGLE_URL} target="_blank" rel="noopener noreferrer" aria-label="View Rambo Wall and Ceiling Limited on Google"><Star size={18} className="rambo-contact-star" aria-hidden="true" /><strong>Find us on Google</strong><ExternalLink size={14} className="rambo-contact-external" aria-hidden="true" /></a>
     </div>
