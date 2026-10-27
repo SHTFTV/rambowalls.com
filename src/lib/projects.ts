@@ -1,3 +1,4 @@
+import batch3 from './october-26-batch3-projects.json';
 export const PROJECT_CATEGORIES = [
   "Acoustic panels",
   "Suspended & T-bar ceilings",
@@ -525,6 +526,7 @@ const REPEATED_GALLERY_SOURCES = new Set([
 const seenGallerySources = new Set<string>();
 
 export const PROJECT_PHOTOS: ProjectPhoto[] = [
+  ...batch3.flatMap(p=>p.photos.map(photo=>({...photo,category:p.category as ProjectCategory,project:p.title,title:p.title,location:p.location,projectUrl:`/project/${p.slug}`}))),
   ...OCTOBER_21_PROJECT_PHOTOS,
   ...RECENT_PROJECT_PHOTOS,
   ...FEATURED_PROJECT_PHOTOS,

@@ -1,6 +1,6 @@
 import { BrandProjects } from "../components/BrandProjects";
 import { RamboMotionHero, RamboSceneIntro } from "../components/RamboMotionHero";
-import stories from "../lib/project-stories.json";
+import stories from "../lib/updated-project-stories";
 import { pageCard } from "../lib/page-cards";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
