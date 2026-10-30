@@ -13,7 +13,8 @@ import {
   RWC_ARCHIVE_PHOTOS,
 } from "../lib/projects";
 
-const LATEST_POSTS = [...BLOG_POSTS].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,4);
+const postTime = (date: string) => Date.parse(date.includes("T") ? date : date + "T12:00:00Z");
+const LATEST_POSTS = [...BLOG_POSTS].sort((a,b)=>postTime(b.date)-postTime(a.date)).slice(0,4);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -96,7 +97,7 @@ function HomePage() {
     <Services/>
     <RamboSceneIntro onToggle={()=>setPaused(value=>!value)} paused={paused} eyebrow="THE PROOF" title="Built by Rambo. Seen in the details." description="Explore completed work and installation stages, with the project photographs and scope together." href="/projects" linkText="Open the project gallery" poster="/projects/mason-oct21/teck-cassette-baffles.jpg"/>
     <ProjectsPreview/>
-    <BlogCarousel paused={paused}/>
+    <BlogCarousel/>
     <RamboSceneIntro onToggle={()=>setPaused(value=>!value)} paused={paused} eyebrow="YOUR NEXT SPACE" title="From an empty shell to a considered interior." description="A clear scope for tenant improvements, commercial spaces and specialty ceiling work." href="#contact" linkText="Discuss your project" poster="/projects/mason-oct21/annacis-office-framing.jpg"/>
     <Sectors/>
     <Contact/>
@@ -195,37 +196,68 @@ function Services() {
   );
 }
 
-function BlogCarousel({paused}:{paused:boolean}) {
+function BlogCarousel() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState(0);
+  const [maxIndex, setMaxIndex] = useState(0);
+  const [playing, setPlaying] = useState(false);
+  const indexRef = useRef(0);
 
   const scrollTo = (i: number) => {
-    const t = trackRef.current;
-    if (!t) return;
-    const card = t.children[i] as HTMLElement | undefined;
-    if (card) t.scrollTo({ left: card.offsetLeft - 16, behavior: "smooth" });
-    setIndex(i);
+    const track = trackRef.current;
+    if (!track) return;
+    const next = Math.max(0, Math.min(i, maxIndex));
+    const card = track.children[next] as HTMLElement | undefined;
+    if (!card) return;
+    const left = card.getBoundingClientRect().left - track.getBoundingClientRect().left + track.scrollLeft;
+    track.scrollTo({ left, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    indexRef.current = next;
+    setIndex(next);
   };
 
   useEffect(() => {
-    if (paused) return;
-    let current=0;
-    const id=setInterval(()=>{
-      current=(current+1)%LATEST_POSTS.length;
-      scrollTo(current);
-    },6000);
-    return ()=>clearInterval(id);
-  },[paused]);
+    const track = trackRef.current;
+    if (!track) return;
+    const measure = () => {
+      const first = track.firstElementChild as HTMLElement | null;
+      if (!first) return;
+      const step = first.getBoundingClientRect().width + 20;
+      const max = Math.max(0, Math.ceil((track.scrollWidth - track.clientWidth - 1) / step));
+      setMaxIndex(max);
+      const atEnd = track.scrollLeft >= track.scrollWidth - track.clientWidth - 2;
+      const current = atEnd ? max : Math.min(max, Math.round(track.scrollLeft / step));
+      indexRef.current = current;
+      setIndex(current);
+    };
+    const observer = new ResizeObserver(measure);
+    observer.observe(track);
+    track.addEventListener("scroll", measure, { passive: true });
+    measure();
+    return () => { observer.disconnect(); track.removeEventListener("scroll", measure); };
+  }, []);
+
+  useEffect(() => {
+    if (!playing || maxIndex === 0) return;
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const id = window.setInterval(() => {
+      const track = trackRef.current;
+      if (!track || media.matches || document.hidden) return;
+      const bounds = track.getBoundingClientRect();
+      if (bounds.bottom <= 0 || bounds.top >= window.innerHeight || track.contains(document.activeElement)) return;
+      scrollTo(indexRef.current >= maxIndex ? 0 : indexRef.current + 1);
+    }, 6000);
+    return () => window.clearInterval(id);
+  }, [playing, maxIndex]);
 
   return (
-    <section id="insights" className="border-y border-border bg-surface py-20">
+    <section id="insights" aria-label="Latest blog posts, newest first" className="border-y border-border bg-surface py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex items-end justify-between gap-4">
           <div>
             <p className="font-display text-sm tracking-[0.2em]" style={{ color: "var(--brand)" }}>
               FROM THE FIELD
             </p>
-            <h2 className="mt-2 text-4xl sm:text-5xl">Latest insights</h2><p className="mt-2 text-sm text-muted-foreground">Latest article: {LATEST_POSTS[0]?.date}</p>
+            <h2 className="mt-2 text-4xl sm:text-5xl">Latest insights</h2><p className="mt-2 text-sm text-muted-foreground">Newest posts first · {new Date(LATEST_POSTS[0].date).toLocaleDateString("en-CA", {year:"numeric",month:"long",day:"numeric",timeZone:"America/Vancouver"})}</p>
           </div>
           <Link
             to="/blog"
@@ -237,6 +269,10 @@ function BlogCarousel({paused}:{paused:boolean}) {
 
         <div
           ref={trackRef}
+          id="latest-blog-track"
+          onPointerDown={() => setPlaying(false)}
+          onFocusCapture={() => setPlaying(false)}
+          style={{ position: "relative" }}
           className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {LATEST_POSTS.map((p) => (
@@ -244,7 +280,7 @@ function BlogCarousel({paused}:{paused:boolean}) {
               key={p.slug}
               to="/blog/$slug"
               params={{ slug: p.slug }}
-              className="group min-w-[85%] snap-start overflow-hidden rounded-lg border border-border bg-card sm:min-w-[60%] md:min-w-[40%] lg:min-w-[32%]"
+              className="group shrink-0 basis-[85%] snap-start overflow-hidden rounded-lg border border-border bg-card sm:basis-[60%] md:basis-[40%] lg:basis-[32%]"
             >
               <div className="aspect-[16/10] overflow-hidden">
                 <img
@@ -270,19 +306,15 @@ function BlogCarousel({paused}:{paused:boolean}) {
           ))}
         </div>
 
-        <div className="mt-6 flex items-center justify-center gap-2">
-          {LATEST_POSTS.map((p, i) => (
-            <button
-              key={p.slug}
-              type="button"
-              onClick={() => scrollTo(i)}
-              aria-label={`Show post ${i + 1}`}
-              className="h-2 w-8 rounded-full transition-colors"
-              style={{
-                backgroundColor: i === index ? "var(--brand)" : "var(--border)",
-              }}
-            />
-          ))}
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-3" aria-label="Blog carousel controls">
+          <button type="button" onClick={() => { setPlaying(false); scrollTo(index - 1); }} disabled={index === 0} aria-controls="latest-blog-track" className="rounded-md border border-border px-4 py-2 text-sm disabled:opacity-40">← Previous</button>
+          <button type="button" onClick={() => { setPlaying(false); scrollTo(index + 1); }} disabled={index >= maxIndex} aria-controls="latest-blog-track" className="rounded-md border border-border px-4 py-2 text-sm disabled:opacity-40">Next →</button>
+          <button type="button" onClick={() => setPlaying(value => !value)} aria-pressed={playing} aria-controls="latest-blog-track" className="rounded-md border border-border px-4 py-2 text-sm">{playing ? "Pause posts" : "Play posts"}</button>
+          <div className="flex gap-2">
+            {Array.from({length: maxIndex + 1}, (_, i) => (
+              <button key={i} type="button" onClick={() => { setPlaying(false); scrollTo(i); }} aria-label={i === 0 ? "Show newest posts" : `Show older posts, position ${i + 1}`} aria-current={i === index ? "true" : undefined} className="h-3 w-7 rounded-full" style={{backgroundColor: i === index ? "var(--brand)" : "var(--border)"}} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
