@@ -31,7 +31,7 @@ function BlogIndex() {
       >
         FIELD NOTES
       </p>
-      <h1 className="mt-2 text-5xl sm:text-6xl">From the jobsite.</h1>
+      <h1 className="mt-2 text-5xl sm:text-6xl">From the jobsite.</h1><a className="mt-4 inline-block underline" href="/feed.xml">Follow the project RSS feed</a>
       <p className="mt-4 max-w-2xl text-muted-foreground">
         Practical guides on the trades we live in: steel stud framing, drywall,
         T-bar ceilings and tenant improvements — written from a Vancouver and

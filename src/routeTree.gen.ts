@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AcousticCeilingContractorsRouteImport } from './routes/acoustic-ceiling-contractors'
 import { Route as CommercialDrywallContractorLowerMainlandRouteImport } from './routes/commercial-drywall-contractor-lower-mainland'
+import { Route as FeedDotxmlRouteImport } from './routes/feed[.]xml'
 import { Route as MissionRouteImport } from './routes/mission'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -37,6 +38,11 @@ const CommercialDrywallContractorLowerMainlandRoute =
     path: '/commercial-drywall-contractor-lower-mainland',
     getParentRoute: () => rootRouteImport,
   } as any)
+const FeedDotxmlRoute = FeedDotxmlRouteImport.update({
+  id: '/feed.xml',
+  path: '/feed.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MissionRoute = MissionRouteImport.update({
   id: '/mission',
   path: '/mission',
@@ -77,6 +83,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/acoustic-ceiling-contractors': typeof AcousticCeilingContractorsRoute
   '/commercial-drywall-contractor-lower-mainland': typeof CommercialDrywallContractorLowerMainlandRoute
+  '/feed.xml': typeof FeedDotxmlRoute
   '/mission': typeof MissionRoute
   '/projects': typeof ProjectsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -89,6 +96,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/acoustic-ceiling-contractors': typeof AcousticCeilingContractorsRoute
   '/commercial-drywall-contractor-lower-mainland': typeof CommercialDrywallContractorLowerMainlandRoute
+  '/feed.xml': typeof FeedDotxmlRoute
   '/mission': typeof MissionRoute
   '/projects': typeof ProjectsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -102,6 +110,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/acoustic-ceiling-contractors': typeof AcousticCeilingContractorsRoute
   '/commercial-drywall-contractor-lower-mainland': typeof CommercialDrywallContractorLowerMainlandRoute
+  '/feed.xml': typeof FeedDotxmlRoute
   '/mission': typeof MissionRoute
   '/projects': typeof ProjectsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -116,6 +125,7 @@ export interface FileRouteTypes {
     | '/'
     | '/acoustic-ceiling-contractors'
     | '/commercial-drywall-contractor-lower-mainland'
+    | '/feed.xml'
     | '/mission'
     | '/projects'
     | '/sitemap.xml'
@@ -128,6 +138,7 @@ export interface FileRouteTypes {
     | '/'
     | '/acoustic-ceiling-contractors'
     | '/commercial-drywall-contractor-lower-mainland'
+    | '/feed.xml'
     | '/mission'
     | '/projects'
     | '/sitemap.xml'
@@ -140,6 +151,7 @@ export interface FileRouteTypes {
     | '/'
     | '/acoustic-ceiling-contractors'
     | '/commercial-drywall-contractor-lower-mainland'
+    | '/feed.xml'
     | '/mission'
     | '/projects'
     | '/sitemap.xml'
@@ -153,6 +165,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AcousticCeilingContractorsRoute: typeof AcousticCeilingContractorsRoute
   CommercialDrywallContractorLowerMainlandRoute: typeof CommercialDrywallContractorLowerMainlandRoute
+  FeedDotxmlRoute: typeof FeedDotxmlRoute
   MissionRoute: typeof MissionRoute
   ProjectsRoute: typeof ProjectsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -183,6 +196,13 @@ declare module '@tanstack/react-router' {
       path: '/commercial-drywall-contractor-lower-mainland'
       fullPath: '/commercial-drywall-contractor-lower-mainland'
       preLoaderRoute: typeof CommercialDrywallContractorLowerMainlandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/feed.xml': {
+      id: '/feed.xml'
+      path: '/feed.xml'
+      fullPath: '/feed.xml'
+      preLoaderRoute: typeof FeedDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mission': {
@@ -242,6 +262,7 @@ const rootRouteChildren: RootRouteChildren = {
   AcousticCeilingContractorsRoute: AcousticCeilingContractorsRoute,
   CommercialDrywallContractorLowerMainlandRoute:
     CommercialDrywallContractorLowerMainlandRoute,
+  FeedDotxmlRoute: FeedDotxmlRoute,
   MissionRoute: MissionRoute,
   ProjectsRoute: ProjectsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,

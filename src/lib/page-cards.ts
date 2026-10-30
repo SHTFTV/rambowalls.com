@@ -1,5 +1,6 @@
 // Generated route-specific social cards. Source: scripts/build-page-cards.mjs.
 export const PAGE_CARDS = {
+"/blog/slocan-centre-health-complexity-tbar-installation":{"image": "https://www.rambowalls.com/projects/slocan-oct29/share.jpg", "alt": "Suspended ceiling grid and exposed services during Rambo\u2019s Slocan installation. Photo: Mason McKenzie / Rambo Wall & Ceiling Limited. Supplied October 29, 2026; installation-stage record, not a completion announcement."},
 "/blog/vancouver-commercial-tbar-grid-before-panels":{"image": "https://www.rambowalls.com/og/pages/post-vancouver-commercial-tbar-grid-before-panels.jpg", "alt": "Vancouver commercial T-bar ceiling grid before panels \u2014 Rambo Wall & Ceiling Limited. Actual project archive photograph supplied by Mason McKenzie."},
 "/blog/tbar-ceilings-acoustic-spray-insulation-coordination":{"image": "https://www.rambowalls.com/og/pages/post-acoustic-spray-tbar-coordination.jpg", "alt": "Rambo: coordinate acoustic spray and T-bar ceilings. Actual Autodesk project photography by Mason McKenzie / Rambo."},
 "/blog/commercial-ceiling-details-from-rambo-projects":{"image":"https://www.rambowalls.com/project-media/teck-cassette-baffles-share.jpg","alt":"Custom cassette baffle ceiling at Teck Resources in Bentall 5, Vancouver. Photo: Mason McKenzie / Rambo Wall & Ceiling Limited."},

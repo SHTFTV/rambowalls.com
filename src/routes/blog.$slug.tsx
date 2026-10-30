@@ -137,7 +137,7 @@ function BlogPostPage() {
             {post.category.toUpperCase()} · {post.readMinutes} MIN READ
           </p>
           <h1 className="mt-3 text-4xl leading-tight sm:text-6xl">{post.title}</h1>
-          <p className="mt-4 text-sm text-muted-foreground">{SITE.name} · {post.date}</p>
+          <p className="mt-4 text-sm text-muted-foreground">{SITE.name} · {post.date.includes("T") ? new Intl.DateTimeFormat("en-CA", {dateStyle:"long",timeZone:"America/Vancouver"}).format(new Date(post.date)) : post.date}</p>
           <p className="mt-5 max-w-2xl text-lg text-muted-foreground">
             {post.description}
           </p>
@@ -183,6 +183,7 @@ function BlogPostPage() {
                   </ul>
                 )}
               </div>
+              {s.photo && <figure className="mt-7"><img src={s.photo.src} alt={s.photo.alt} loading="lazy" width="2000" height="1126" className="w-full h-auto rounded-lg" /><figcaption className="mt-2 text-xs text-muted-foreground">{s.photo.caption}</figcaption></figure>}
             </section>
           ))}
 

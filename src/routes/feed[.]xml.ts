@@ -1,0 +1,5 @@
+import { createFileRoute } from '@tanstack/react-router';
+import type {} from '@tanstack/react-start';
+import { BLOG_POSTS } from '../lib/site';
+const esc = (s: string) => s.replace(/[<>&"']/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&apos;'}[c]!));
+export const Route = createFileRoute('/feed.xml')({server:{handlers:{GET:async()=>new Response(`<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Rambo Walls &amp; Ceilings</title><link>https://www.rambowalls.com/blog</link><description>Project photographs and practical walls and ceilings insights.</description>${BLOG_POSTS.map(p=>`<item><title>${esc(p.title)}</title><link>https://www.rambowalls.com/blog/${p.slug}</link><guid isPermaLink="true">https://www.rambowalls.com/blog/${p.slug}</guid><pubDate>${new Date(p.date.includes('T')?p.date:p.date+'T12:00:00-07:00').toUTCString()}</pubDate><description>${esc(p.excerpt)}</description></item>`).join('')}</channel></rss>`,{headers:{'content-type':'application/rss+xml; charset=utf-8'}})}}});
