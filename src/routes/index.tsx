@@ -261,7 +261,7 @@ function BlogCarousel({paused}:{paused:boolean}) {
                   style={{ color: "var(--brand)" }}
                 >
                   {p.category} · {p.readMinutes} min read
-                  <time className="mt-2 block" dateTime={p.date}>{new Date(p.date + "T12:00:00Z").toLocaleDateString("en-CA", {year:"numeric",month:"long",day:"numeric",timeZone:"America/Vancouver"})}</time>
+                  <time className="mt-2 block" dateTime={p.date}>{new Date(p.date.includes("T") ? p.date : p.date + "T12:00:00Z").toLocaleDateString("en-CA", {year:"numeric",month:"long",day:"numeric",timeZone:"America/Vancouver"})}</time>
                 </p>
                 <h3 className="mt-2 text-xl leading-snug">{p.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{p.excerpt}</p>

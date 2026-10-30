@@ -187,6 +187,8 @@ function BlogPostPage() {
             </section>
           ))}
 
+          {post.slug==="tbar-ceiling-planning-height-access-fire-seismic" ? <aside aria-label="Industry Army Marketing advertisement" className="border-y border-border py-4"><p className="text-xs font-semibold tracking-wider text-muted-foreground">ADVERTISEMENT · INDUSTRY ARMY MARKETING</p><p className="mt-2 text-sm">Marketing for trade businesses. <a className="underline" href="https://www.industryarmymarketing.com/">Explore IAM →</a></p><p className="mt-1 text-xs text-muted-foreground">Ceiling project enquiries go to Mason through the Rambo contact card.</p></aside> : null}
+
           {content.sources?.length ? <section aria-label="Article sources"><h2 className="text-3xl">Sources</h2><ul className="mt-4 space-y-3">{content.sources.map(source => <li key={source.href}><a className="underline" href={source.href} target="_blank" rel="noopener noreferrer">{source.label} ↗</a></li>)}</ul></section> : null}
           <section
             className="rounded-lg border border-border bg-card p-6"

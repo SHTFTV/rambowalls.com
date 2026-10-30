@@ -315,6 +315,6 @@ function SiteFooter() {
       <div className="border-t border-border py-5 text-center text-xs text-muted-foreground">
         © {new Date().getFullYear()} {SITE.name}. All rights reserved.
       </div>
-    <div data-iam-credit="true" style={{boxSizing:"border-box",width:"100%",gridColumn:"1 / -1",padding:"16px 24px",textAlign:"center",fontSize:"12px",lineHeight:1.5,color:"inherit"}}>Powered by <a href="https://industryarmymarketing.com/" style={{color:"inherit",textDecoration:"underline",textUnderlineOffset:"3px"}}>Industry Army Marketing</a></div></footer>
+    <div data-iam-credit="true" style={{boxSizing:"border-box",width:"100%",gridColumn:"1 / -1",padding:"16px 24px",textAlign:"center",fontSize:"12px",lineHeight:1.5,color:"inherit"}}><a href="https://www.industryarmymarketing.com/" style={{color:"inherit",textDecoration:"underline",textUnderlineOffset:"3px"}}>Powered by Industry Army Marketing</a></div></footer>
   );
 }

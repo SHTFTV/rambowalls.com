@@ -61,6 +61,7 @@ function BlogIndex() {
                 style={{ color: "var(--brand)" }}
               >
                 {p.category} · {p.readMinutes} min read
+                <time className="mt-2 block" dateTime={p.date}>{new Intl.DateTimeFormat("en-CA",{dateStyle:"long",timeZone:"America/Vancouver"}).format(new Date(p.date.includes("T")?p.date:p.date+"T12:00:00Z"))}</time>
               </p>
               <h2 className="mt-2 text-2xl leading-snug">{p.title}</h2>
               <p className="mt-2 text-sm text-muted-foreground">{p.excerpt}</p>
