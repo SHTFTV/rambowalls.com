@@ -29,7 +29,7 @@ export const Route = createFileRoute("/sitemap.xml")({
             priority: "0.9",
             changefreq: "monthly",
           })),
-          ...BLOG_POSTS.map((p) => ({
+          ...BLOG_POSTS.filter(p=>!p.canonicalPath).map((p) => ({
             path: `/blog/${p.slug}`,
             priority: "0.7",
             changefreq: "monthly",

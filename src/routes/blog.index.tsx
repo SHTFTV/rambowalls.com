@@ -41,10 +41,9 @@ function BlogIndex() {
       <figure className="mt-8"><img src="/projects/mason-oct21/annacis-office-framing.jpg" width="1800" height="853" alt="Steel stud interior walls at an Annacis Island office tenant improvement by Rambo Wall & Ceiling Limited" className="max-h-[360px] w-full rounded-xl object-cover" /><figcaption className="mt-2 text-xs text-muted-foreground">Annacis Island office tenant improvement · Photo supplied by Mason McKenzie / Rambo Wall & Ceiling Limited.</figcaption></figure>
       <div className="mt-12 grid gap-6 md:grid-cols-2">
         {BLOG_POSTS.map((p) => (
-          <Link
+          <a
             key={p.slug}
-            to="/blog/$slug"
-            params={{ slug: p.slug }}
+            href={p.canonicalPath ?? `/blog/${p.slug}`}
             className="group overflow-hidden rounded-lg border border-border bg-card"
           >
             <div className="aspect-[16/9] overflow-hidden">
@@ -66,7 +65,7 @@ function BlogIndex() {
               <h2 className="mt-2 text-2xl leading-snug">{p.title}</h2>
               <p className="mt-2 text-sm text-muted-foreground">{p.excerpt}</p>
             </div>
-          </Link>
+          </a>
         ))}
       </div>
     </section>

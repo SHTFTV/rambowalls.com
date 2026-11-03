@@ -276,10 +276,9 @@ function BlogCarousel() {
           className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {LATEST_POSTS.map((p) => (
-            <Link
+            <a
               key={p.slug}
-              to="/blog/$slug"
-              params={{ slug: p.slug }}
+              href={p.canonicalPath ?? `/blog/${p.slug}`}
               className="group shrink-0 basis-[85%] snap-start overflow-hidden rounded-lg border border-border bg-card sm:basis-[60%] md:basis-[40%] lg:basis-[32%]"
             >
               <div className="aspect-[16/10] overflow-hidden">
@@ -302,7 +301,7 @@ function BlogCarousel() {
                 <h3 className="mt-2 text-xl leading-snug">{p.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{p.excerpt}</p>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
 

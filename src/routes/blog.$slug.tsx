@@ -1,6 +1,6 @@
 import projectStories from "../lib/project-stories.json";
 import { pageCard } from "../lib/page-cards";
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import { SITE, type BlogPost } from "../lib/site";
 import type { BlogContent } from "../lib/blog-content";
 import { getBlogPost, getBlogContent, getRelatedPosts } from "../lib/blog-content";
@@ -8,6 +8,7 @@ import { getBlogPost, getBlogContent, getRelatedPosts } from "../lib/blog-conten
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
     const post = getBlogPost(params.slug);
+    if (post?.canonicalPath) throw redirect({href:post.canonicalPath});
     const content = getBlogContent(params.slug);
     if (!post || !content) throw notFound();
     return { post, content };
@@ -58,6 +59,7 @@ export const Route = createFileRoute("/blog/$slug")({
             },
             mainEntityOfPage: { "@type": "WebPage", "@id": url },
             articleSection: post.category,
+            ...(post.location ? {contentLocation:{"@type":"Place",name:post.location}} : {}),
           }),
         },
         {
@@ -149,7 +151,7 @@ function BlogPostPage() {
           <img
             src={post.image}
             title={post.imageAlt} alt={post.imageAlt}
-            className="h-full w-full object-cover"
+            className="max-h-[680px] w-full object-contain bg-black/5"
           />
           <figcaption className="border-t border-border bg-card px-4 py-2 text-xs text-muted-foreground">
             {post.imageAlt}
@@ -189,6 +191,7 @@ function BlogPostPage() {
 
           {post.slug==="tbar-ceiling-planning-height-access-fire-seismic" ? <aside aria-label="Industry Army Marketing advertisement" className="border-y border-border py-4"><p className="text-xs font-semibold tracking-wider text-muted-foreground">ADVERTISEMENT · INDUSTRY ARMY MARKETING</p><p className="mt-2 text-sm">Marketing for trade businesses. <a className="underline" href="https://www.industryarmymarketing.com/">Explore IAM →</a></p><p className="mt-1 text-xs text-muted-foreground">Ceiling project enquiries go to Mason through the Rambo contact card.</p></aside> : null}
 
+          {content.relatedLinks?.length ? <nav aria-label="Related services and projects" className="rounded-lg border border-border bg-card p-6"><h2 className="text-2xl">Plan a similar ceiling</h2><ul className="mt-4 space-y-3">{content.relatedLinks.map(link=><li key={link.href}><a className="underline" href={link.href}>{link.label} →</a></li>)}</ul></nav> : null}
           {content.sources?.length ? <section aria-label="Article sources"><h2 className="text-3xl">Sources</h2><ul className="mt-4 space-y-3">{content.sources.map(source => <li key={source.href}><a className="underline" href={source.href} target="_blank" rel="noopener noreferrer">{source.label} ↗</a></li>)}</ul></section> : null}
           <section
             className="rounded-lg border border-border bg-card p-6"
@@ -218,10 +221,10 @@ function BlogPostPage() {
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <a
-                href="sms:+17787732790"
+                href={SITE.phoneHref}
                 className="rounded-md bg-background px-5 py-3 font-semibold text-foreground"
               >
-                Text {SITE.phone}
+                Call {SITE.phone}
               </a>
               <a
                 href={SITE.emailHref}
