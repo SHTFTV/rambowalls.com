@@ -25,6 +25,18 @@ export type BlogPost = {
 };
 
 export const BLOG_POSTS: BlogPost[] = [
+{
+  "slug": "acoustic-ceiling-baffles-vancouver-room-echo",
+  "title": "Acoustic ceiling baffles for Vancouver offices: start with the room’s echo",
+  "description": "What to listen for, what a product test can tell you and what to mark on the ceiling plan before pricing baffles.",
+  "excerpt": "What to listen for, what a product test can tell you and what to mark on the ceiling plan before pricing baffles.",
+  "image": "/projects/mason-oct21/teck-cassette-baffles.jpg",
+  "imageAlt": "Custom cassette baffle ceiling at Teck Resources in Bentall 5, Vancouver. Photo: Mason McKenzie / Rambo Wall & Ceiling Limited.",
+  "category": "Acoustic Ceilings",
+  "date": "2026-11-18T22:19:11.351Z",
+  "readMinutes": 2,
+  "location": "Greater Vancouver, BC"
+},
 {"slug": "surrey-packing-warehouse-tbar-installation", "title": "Surrey Packing Warehouse: T-Bar Grid Taking Shape", "description": "Four Mason McKenzie photographs show Rambo’s open T-bar grid installation at a packing warehouse in Surrey.", "excerpt": "Four Mason McKenzie photographs show Rambo’s open T-bar grid installation at a packing warehouse in Surrey.", "image": "/projects/nov2-ceilings/surrey-1.webp", "imageAlt": "Open T-bar grid and installation lift at a Surrey packing warehouse. Photo: Mason McKenzie / Rambo Wall & Ceiling Limited. Supplied November 1, 2026; installation date not confirmed.", "category": "T-Bar Project Story", "date": "2026-11-03T03:19:46Z", "readMinutes": 4, "location": "Surrey, BC"},
 {"slug": "cascades-casino-delta-tbar-ceiling", "title": "Cascades Casino Delta: T-Bar Ceiling Over the Casino Floor", "description": "A three-photo project story of Rambo’s T-bar ceiling work over the casino floor at Cascades Casino in Delta.", "excerpt": "A three-photo project story of Rambo’s T-bar ceiling work over the casino floor at Cascades Casino in Delta.", "image": "/projects/nov2-ceilings/cascades-1.webp", "imageAlt": "Patterned T-bar ceiling above the casino floor during fit-out at Cascades Casino Delta. Photo: Mason McKenzie / Rambo Wall & Ceiling Limited. Supplied November 1, 2026; installation date not confirmed.", "category": "T-Bar Project Story", "date": "2026-11-03T03:19:46Z", "readMinutes": 4, "location": "Delta, BC"},
 {"slug": "amazon-pitt-meadows-ceiling", "canonicalPath": "/project/amazon-pitt-meadows-ceiling", "title": "Amazon Pitt Meadows: Additional T-Bar and Tile Photographs", "description": "Four additional Mason McKenzie photos extend the existing Amazon ceiling project record, with tile, lighting and ceiling-feature views.", "excerpt": "Updated project record: new tile views alongside the preserved earlier open-grid photographs.", "image": "/projects/nov2-ceilings/amazon-1.webp", "imageAlt": "Tiled T-bar ceiling with blue and yellow features. Photo: Mason McKenzie / Rambo Wall & Ceiling Limited. Supplied November 1, 2026; installation date not confirmed.", "category": "Project photo update", "date": "2026-11-03T03:19:46Z", "readMinutes": 4},
