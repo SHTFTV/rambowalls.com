@@ -1,5 +1,6 @@
 // Generated route-specific social cards. Source: scripts/build-page-cards.mjs.
 export const PAGE_CARDS = {
+"/blog/acoustic-ceiling-baffles-vancouver-room-echo":{"image":"https://www.rambowalls.com/project-media/teck-cassette-baffles-share.jpg","alt":"Cassette baffles at Bentall 5 in Vancouver. Photo: Mason McKenzie / Rambo Wall & Ceiling Limited."},
 "/blog/cascades-casino-delta-tbar-ceiling":{"image": "https://www.rambowalls.com/projects/nov2-ceilings/cascades-share.jpg", "alt": "Patterned T-bar ceiling above the casino floor during fit-out at Cascades Casino Delta. Photo: Mason McKenzie / Rambo Wall & Ceiling Limited. Supplied November 1, 2026; installation date not confirmed."},
 "/blog/surrey-packing-warehouse-tbar-installation":{"image": "https://www.rambowalls.com/projects/nov2-ceilings/surrey-share.jpg", "alt": "Open T-bar grid and installation lift at a Surrey packing warehouse. Photo: Mason McKenzie / Rambo Wall & Ceiling Limited. Supplied November 1, 2026; installation date not confirmed."},
 "/blog/tbar-ceiling-planning-height-access-fire-seismic":{"image": "https://www.rambowalls.com/og/pages/post-tbar-ceiling-planning-height-access-fire-seismic.jpg", "alt": "Plan the height, access and assembly \u2014 Rambo Walls & Ceilings. Actual Vancouver project archive photo by Mason McKenzie / Rambo."},
