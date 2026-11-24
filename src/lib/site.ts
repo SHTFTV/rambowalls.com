@@ -26,6 +26,18 @@ export type BlogPost = {
 
 export const BLOG_POSTS: BlogPost[] = [
 {
+  "slug": "nicola-wealth-stretch-fabric-acoustic-wall",
+  "title": "Nicola Wealth’s new Vancouver office gets a full-length stretch-fabric acoustic wall",
+  "description": "Rambo Wall & Ceiling Limited installed a full-length stretch-fabric acoustic wall at Nicola Wealth’s new office at 2488 Granville Street in Vancouver. The project photos show the wall as the backing goes in and the fabric face takes shape across the room.",
+  "excerpt": "Rambo Wall & Ceiling Limited installed a full-length stretch-fabric acoustic wall at Nicola Wealth’s new office at 2488 Granville Street in Vancouver. The project photos show the wall as the backing goes in and the fabric face takes shape across the room.",
+  "image": "/projects/nicola-wealth-acoustic-wall/finished.jpg",
+  "imageAlt": "White stretch-fabric acoustic wall at Nicola Wealth’s Vancouver office.",
+  "category": "Stretch-Fabric Project",
+  "date": "2026-11-23T19:30:00-08:00",
+  "readMinutes": 2,
+  "location": "Vancouver, BC"
+},
+{
   "slug": "acoustic-ceiling-baffles-vancouver-room-echo",
   "title": "Acoustic ceiling baffles for Vancouver offices: start with the room’s echo",
   "description": "What to listen for, what a product test can tell you and what to mark on the ceiling plan before pricing baffles.",

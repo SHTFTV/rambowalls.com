@@ -11,6 +11,45 @@ export type BlogContent = {
 };
 
 export const BLOG_CONTENT: Record<string, BlogContent> = {
+"nicola-wealth-stretch-fabric-acoustic-wall": {
+  "intro": "Rambo Wall & Ceiling Limited installed a full-length stretch-fabric acoustic wall at Nicola Wealth’s new office at 2488 Granville Street in Vancouver. The project photos show the wall as the backing goes in and the fabric face takes shape across the room.",
+  "sections": [
+    {
+      "heading": "The fabric face takes shape",
+      "paragraphs": [
+        "The intermediate view shows part of the white surface in place with backing still visible on both sides. Later views show the fabric spanning the wall between the adjacent finishes. Seeing the stages together makes it easier to understand how the broad, clean face comes together."
+      ],
+      "photo": {
+        "src": "/projects/nicola-wealth-acoustic-wall/installation.jpg",
+        "alt": "Fabric installation in progress.",
+        "caption": "Fabric installation in progress. Photo supplied by Mason McKenzie / Rambo Wall & Ceiling Limited."
+      }
+    },
+    {
+      "heading": "Plan a comparable wall",
+      "paragraphs": [
+        "Planning a comparable wall? Send Rambo the wall elevations, room dimensions, finish requirements and construction schedule. Include any outlets, controls or other items the wall finish needs to accommodate."
+      ],
+      "photo": {
+        "src": "/projects/nicola-wealth-acoustic-wall/backing.jpg",
+        "alt": "Exposed backing before the fabric face goes on.",
+        "caption": "Exposed backing before the fabric face goes on. Photo supplied by Mason McKenzie / Rambo Wall & Ceiling Limited."
+      }
+    }
+  ],
+  "faq": [
+    {
+      "q": "Where was this acoustic wall installed?",
+      "a": "At Nicola Wealth’s new office at 2488 Granville Street in Vancouver."
+    }
+  ],
+  "relatedLinks": [
+    {
+      "label": "Explore Rambo projects",
+      "href": "/projects"
+    }
+  ]
+},
 "acoustic-ceiling-baffles-vancouver-room-echo": {
   "intro": "In an open office, a conversation can be easy to hear at the table and still leave a wash of sound across the room. Suspended acoustic baffles give designers a way to add sound-absorbing surfaces while keeping parts of the overhead structure visible. The first question for a Greater Vancouver tenant improvement is where listeners are struggling and what they are hearing.",
   "sections": [
